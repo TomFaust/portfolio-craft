@@ -1,0 +1,95 @@
+color: null
+fieldLayouts:
+  66f4954d-cc23-4c9c-abf2-9b4ea81bc8c0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 48c22ca0-9f33-4c1b-b5f2-5cd2e8f937cc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: da878ded-8b92-4d04-bf6e-78fe822b5b8e # Can be duplicated?
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c3460f4e-f4b7-443a-ac13-1fb1af4dcdbd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 643e2a1b-c91c-4e6a-9202-c9d35696ec1b # Icon
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f055562b-558e-4ebb-a058-b49bf98727c5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a9f99a5f-a049-46a8-bd54-4d21598bee37 # Window icon
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72bc741c-eecb-448e-bf54-010e82c8ad7c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ae272aee-50f0-4d6b-95b8-8ea6b8310e9e
+        userCondition: null
+handle: program
+hasTitleField: true
+icon: calculator
+name: Program
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: ''
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: ''
+titleTranslationMethod: site

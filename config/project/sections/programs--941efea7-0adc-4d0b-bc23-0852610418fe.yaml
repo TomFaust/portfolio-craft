@@ -1,0 +1,32 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 91df1c71-2eec-4714-9dbf-8bca03578466 # Program
+handle: programs
+maxAuthors: 1
+name: Programs
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5dbfae60-be3c-4927-8d3a-f96448c7d460: # portfolio-craft EN
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  6a3d40f8-2fc0-4970-83ff-d661ac632f5a: # portfolio-craft
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

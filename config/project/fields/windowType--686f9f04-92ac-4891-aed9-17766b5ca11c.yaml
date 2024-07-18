@@ -1,0 +1,65 @@
+columnSuffix: null
+handle: windowType
+instructions: null
+name: 'Window Type'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Default
+        -
+          - value
+          - default
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'About me'
+        -
+          - value
+          - about_me
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'File explorer'
+        -
+          - value
+          - file_explorer
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Internet explorer'
+        -
+          - value
+          - internet_explorer
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Notepad
+        -
+          - value
+          - notepad
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

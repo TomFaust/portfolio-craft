@@ -1,11 +1,28 @@
-dateModified: 1721301763
+dateModified: 1721306449
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  files:
+    hasUrls: true
+    name: Files
+    settings:
+      path: $ASSET_BASE_PATH
+    type: craft\fs\Local
+    url: $ASSET_BASE_URL
 meta:
   __names__:
+    1ef4c050-d814-47c6-9dbb-2449c83d9fa7: Files # Files
+    5dbfae60-be3c-4927-8d3a-f96448c7d460: 'portfolio-craft EN' # portfolio-craft EN
     6a3d40f8-2fc0-4970-83ff-d661ac632f5a: portfolio-craft # portfolio-craft
+    42c395fa-2f2c-472c-a879-7dc4a5a674b4: 'Public Schema' # Public Schema
+    91df1c71-2eec-4714-9dbf-8bca03578466: Program # Program
+    643e2a1b-c91c-4e6a-9202-c9d35696ec1b: Icon # Icon
+    686f9f04-92ac-4891-aed9-17766b5ca11c: 'Window Type' # Window Type
+    941efea7-0adc-4d0b-bc23-0852610418fe: Programs # Programs
+    a9f99a5f-a049-46a8-bd54-4d21598bee37: 'Window icon' # Window icon
+    da878ded-8b92-4d04-bf6e-78fe822b5b8e: 'Can be duplicated?' # Can be duplicated?
     ecbaba17-c1a7-4e70-8a37-06a312e4de04: portfolio-craft # portfolio-craft
 system:
   edition: solo
