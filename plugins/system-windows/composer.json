@@ -1,0 +1,38 @@
+{
+  "name": "tom-faust/craft-system-windows",
+  "type": "craft-plugin",
+  "require": {
+    "php": ">=8.2",
+    "craftcms/cms": "^5.5.0"
+  },
+  "require-dev": {
+    "craftcms/ecs": "dev-main",
+    "craftcms/phpstan": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "tomfaust\\craftsystemwindows\\": "src/"
+    }
+  },
+  "extra": {
+    "handle": "system-windows",
+    "name": "system-windows",
+    "developer": "Tom Faust",
+    "documentationUrl": ""
+  },
+  "scripts": {
+    "check-cs": "ecs check --ansi",
+    "fix-cs": "ecs check --ansi --fix",
+    "phpstan": "phpstan --memory-limit=1G"
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
+}

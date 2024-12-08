@@ -4,6 +4,7 @@ instructions: null
 name: 'Window Type'
 searchable: false
 settings:
+  customOptions: false
   options:
     -
       __assoc__:
@@ -24,6 +25,17 @@ settings:
         -
           - value
           - about_me
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Contact
+        -
+          - value
+          - contact
         -
           - default
           - ''

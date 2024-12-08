@@ -1,0 +1,40 @@
+{
+  "src/js/customization.js": {
+    "file": "assets/customization-950ce08c.js",
+    "isEntry": true,
+    "src": "src/js/customization.js"
+  },
+  "src/js/main.css": {
+    "file": "assets/main-6c6d098a.css",
+    "src": "src/js/main.css"
+  },
+  "src/js/main.js": {
+    "css": [
+      "assets/main-6c6d098a.css"
+    ],
+    "file": "assets/main-c972b8eb.js",
+    "imports": [
+      "src/js/timer.js",
+      "src/js/customization.js",
+      "src/js/sprites.js",
+      "src/js/windows.js"
+    ],
+    "isEntry": true,
+    "src": "src/js/main.js"
+  },
+  "src/js/sprites.js": {
+    "file": "assets/sprites-5b8fcfc5.js",
+    "isEntry": true,
+    "src": "src/js/sprites.js"
+  },
+  "src/js/timer.js": {
+    "file": "assets/timer-faf8d1cd.js",
+    "isEntry": true,
+    "src": "src/js/timer.js"
+  },
+  "src/js/windows.js": {
+    "file": "assets/windows-c00f6f83.js",
+    "isEntry": true,
+    "src": "src/js/windows.js"
+  }
+}

@@ -10,6 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2024-12-08T16:25:08+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -24,7 +25,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -35,6 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-12-08T16:25:08+00:00'
             elementCondition: null
             fieldUid: da878ded-8b92-4d04-bf6e-78fe822b5b8e # Can be duplicated?
             handle: null
@@ -50,6 +52,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-12-08T16:25:08+00:00'
             elementCondition: null
             fieldUid: 643e2a1b-c91c-4e6a-9202-c9d35696ec1b # Icon
             handle: null
@@ -65,6 +68,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-12-08T16:25:08+00:00'
             elementCondition: null
             fieldUid: a9f99a5f-a049-46a8-bd54-4d21598bee37 # Window icon
             handle: null
@@ -76,6 +80,38 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 72bc741c-eecb-448e-bf54-010e82c8ad7c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-08T16:26:18+00:00'
+            elementCondition: null
+            fieldUid: 5cbbc156-a371-4496-b3ac-59ef92544ad4 # Content ID
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5183f172-cc08-4984-ba5d-0d4ff93f9618
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-08T16:26:18+00:00'
+            elementCondition: null
+            fieldUid: 686f9f04-92ac-4891-aed9-17766b5ca11c # Window Type
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c5080f1-6906-4871-85fa-7a39b23011e8
             userCondition: null
             warning: null
             width: 100

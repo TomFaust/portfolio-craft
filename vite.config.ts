@@ -32,7 +32,7 @@ export default defineConfig(({command}) => {
         base: command === 'serve' ? '' : '/dist/',
         build: {
             manifest: true,
-            outDir: './public_html/dist/',
+            outDir: './web/dist/',
             rollupOptions: {
                 input: files,
             }
