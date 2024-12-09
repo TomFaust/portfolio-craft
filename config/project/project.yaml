@@ -26,10 +26,6 @@ meta:
     da878ded-8b92-4d04-bf6e-78fe822b5b8e: 'Can be duplicated?' # Can be duplicated?
     ecbaba17-c1a7-4e70-8a37-06a312e4de04: portfolio-craft # portfolio-craft
 plugins:
-  _system-windows:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   system-windows:
     edition: standard
     enabled: true

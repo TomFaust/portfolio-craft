@@ -8,3 +8,4 @@ import "./windows.js";
 import '../css/style.css';
 import '../css/me.css';
 import '../css/windowSizes.css';
+import "98.css";

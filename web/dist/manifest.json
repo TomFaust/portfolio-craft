@@ -1,18 +1,40 @@
 {
+  "node_modules/98.css/dist/ms_sans_serif.woff": {
+    "file": "assets/ms_sans_serif-11318ea1.woff",
+    "src": "node_modules/98.css/dist/ms_sans_serif.woff"
+  },
+  "node_modules/98.css/dist/ms_sans_serif.woff2": {
+    "file": "assets/ms_sans_serif-11b5a68a.woff2",
+    "src": "node_modules/98.css/dist/ms_sans_serif.woff2"
+  },
+  "node_modules/98.css/dist/ms_sans_serif_bold.woff": {
+    "file": "assets/ms_sans_serif_bold-e7b28b60.woff",
+    "src": "node_modules/98.css/dist/ms_sans_serif_bold.woff"
+  },
+  "node_modules/98.css/dist/ms_sans_serif_bold.woff2": {
+    "file": "assets/ms_sans_serif_bold-5f3fbc57.woff2",
+    "src": "node_modules/98.css/dist/ms_sans_serif_bold.woff2"
+  },
   "src/js/customization.js": {
     "file": "assets/customization-950ce08c.js",
     "isEntry": true,
     "src": "src/js/customization.js"
   },
   "src/js/main.css": {
-    "file": "assets/main-6c6d098a.css",
+    "file": "assets/main-874b17af.css",
     "src": "src/js/main.css"
   },
   "src/js/main.js": {
-    "css": [
-      "assets/main-6c6d098a.css"
+    "assets": [
+      "assets/ms_sans_serif-11318ea1.woff",
+      "assets/ms_sans_serif-11b5a68a.woff2",
+      "assets/ms_sans_serif_bold-e7b28b60.woff",
+      "assets/ms_sans_serif_bold-5f3fbc57.woff2"
     ],
-    "file": "assets/main-c972b8eb.js",
+    "css": [
+      "assets/main-874b17af.css"
+    ],
+    "file": "assets/main-36299093.js",
     "imports": [
       "src/js/timer.js",
       "src/js/customization.js",
