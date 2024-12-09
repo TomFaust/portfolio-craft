@@ -23,7 +23,7 @@
         height: 7px;
         width:100%;
         top:0;
-        background-image: url("../../public_html/assets/speech_bubble/top.png");
+        background-image: url("/public/img/speechbubble/top.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         -o-background-size: 100% 100%;
@@ -33,7 +33,7 @@
 
     #middle{
         width:100%;
-        background-image: url("../../public_html/assets/speech_bubble/middle.png");
+        background-image: url("/public/img/speechbubble/middle.png");
         background-repeat: no-repeat;
         -o-background-size: cover;
         -moz-background-size: cover;
@@ -47,7 +47,7 @@
     #bottom{
         height: 20px;
         width:100%;
-        background-image: url("../../public_html/assets/speech_bubble/bottom.png");
+        background-image: url("/public/img/speechbubble/bottom.png");
         background-repeat: no-repeat;
         -o-background-size: cover;
         -moz-background-size: cover;

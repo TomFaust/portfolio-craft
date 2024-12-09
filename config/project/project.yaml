@@ -1,4 +1,4 @@
-dateModified: 1733684472
+dateModified: 1733778931
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
@@ -19,6 +19,7 @@ meta:
     6a3d40f8-2fc0-4970-83ff-d661ac632f5a: portfolio-craft # portfolio-craft
     42c395fa-2f2c-472c-a879-7dc4a5a674b4: 'Public Schema' # Public Schema
     91df1c71-2eec-4714-9dbf-8bca03578466: Program # Program
+    357a9117-f4c9-48f2-a5d4-d379e8bc0106: Display # Display
     643e2a1b-c91c-4e6a-9202-c9d35696ec1b: Icon # Icon
     686f9f04-92ac-4891-aed9-17766b5ca11c: 'Window Type' # Window Type
     941efea7-0adc-4d0b-bc23-0852610418fe: Programs # Programs
@@ -26,7 +27,11 @@ meta:
     da878ded-8b92-4d04-bf6e-78fe822b5b8e: 'Can be duplicated?' # Can be duplicated?
     ecbaba17-c1a7-4e70-8a37-06a312e4de04: portfolio-craft # portfolio-craft
 plugins:
-  system-windows:
+  _portfolio-core:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  portfolio-core:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

@@ -1,5 +1,5 @@
 {
-  "name": "tom-faust/craft-system-windows",
+  "name": "tom-faust/craft-portfolio-core",
   "type": "craft-plugin",
   "require": {
     "php": ">=8.2",
@@ -11,12 +11,12 @@
   },
   "autoload": {
     "psr-4": {
-      "tomfaust\\craftsystemwindows\\": "src/"
+      "tomfaust\\craftportfoliocore\\": "src/"
     }
   },
   "extra": {
-    "handle": "system-windows",
-    "name": "system-windows",
+    "handle": "_portfolio-core",
+    "name": "Portfolio Core",
     "developer": "Tom Faust",
     "documentationUrl": ""
   },

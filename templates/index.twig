@@ -6,7 +6,7 @@
   
     <div id="desktopIcons">
 
-        {% set icons = craft.entries.section('programs').all() %}
+        {% set icons = craft.entries.section('programs').display(1).all() %}
 
         {% for icon in icons %}
 
@@ -14,9 +14,8 @@
                 <div 
                     class="pointer clickable" 
                     id="{{ icon.contentId }}"
-                    data-window="{{ icon.windowType.value }}" 
-                    data-can-duplicate="0"
-                    data-window-icon="{{ icon.windowIcon.one().url }}"
+                    data-entryid="{{ icon.id }}"
+                    data-can-duplicate="{{ icon.canBeDuplicated }}"
                 >
                 <div class="iconImage">
                     <img id="tableBanner" src="{{ icon.icon.one().url }}">
@@ -29,8 +28,7 @@
 
     </div>
 
-    <!-- <img id="plane_flight" src="assets/Sprites/Airplane_flight.gif"> -->
-    <img id="me" src="assets/Sprites/Me_idle_left.gif">
+    <img id="me" src="public/img/sprites/Me_idle_left.gif">
 
     <div id="speechBubble">
       <div id="top"></div>
@@ -48,7 +46,6 @@
         <ul class="window" id="mainMenu">
 
           <div id="menuSideBar"><p>Windows98</p></div>
-
 
           <li class="silver">
             <a href="#" class="pointer">
@@ -136,6 +133,11 @@
             } %}
 
             window.Craft = {{ csrfToken|json_encode|raw }};
+
+            {% set welcome = craft.entries.slug('welcome').one() %}
+            {% if welcome %}
+              window.welcome = {{ welcome.id }};
+            {% endif %}
         </script>
 
 {% endblock %}

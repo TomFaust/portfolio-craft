@@ -21,7 +21,7 @@
     "src": "src/js/customization.js"
   },
   "src/js/main.css": {
-    "file": "assets/main-8f88e725.css",
+    "file": "assets/main-efc332ec.css",
     "src": "src/js/main.css"
   },
   "src/js/main.js": {
@@ -32,9 +32,9 @@
       "assets/ms_sans_serif_bold-5f3fbc57.woff2"
     ],
     "css": [
-      "assets/main-8f88e725.css"
+      "assets/main-efc332ec.css"
     ],
-    "file": "assets/main-56a6e81e.js",
+    "file": "assets/main-f25a4244.js",
     "imports": [
       "src/js/timer.js",
       "src/js/customization.js",
@@ -45,7 +45,7 @@
     "src": "src/js/main.js"
   },
   "src/js/sprites.js": {
-    "file": "assets/sprites-5b8fcfc5.js",
+    "file": "assets/sprites-dee03413.js",
     "isEntry": true,
     "src": "src/js/sprites.js"
   },
@@ -55,7 +55,7 @@
     "src": "src/js/timer.js"
   },
   "src/js/windows.js": {
-    "file": "assets/windows-c00f6f83.js",
+    "file": "assets/windows-c3e23539.js",
     "isEntry": true,
     "src": "src/js/windows.js"
   }

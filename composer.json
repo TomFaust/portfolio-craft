@@ -4,7 +4,7 @@
   "require": {
     "craftcms/cms": "^5.0.0",
     "nystudio107/craft-vite": "5.0.1",
-    "tom-faust/craft-system-windows": "dev-main",
+    "tom-faust/craft-portfolio-core": "dev-main",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -41,6 +41,10 @@
     {
       "type": "path",
       "url": "plugins/system-windows"
+    },
+    {
+      "type": "path",
+      "url": "plugins/portfolio-core"
     }
   ]
 }

@@ -64,7 +64,7 @@ a:active {
     border: solid 1px #c0c0c0;
 
     .icon{
-        background-image: url(../../public_html/assets/icons/browser/grayscale/browse-ui-icons-grayscale.png);
+        background-image: url(/public/img/browse-ui-icons-grayscale.png);
         background-size: auto 100%;
 
         background-repeat: no-repeat;
@@ -82,11 +82,11 @@ button.toolbar-button:enabled{
 }
 
 button.toolbar-button:hover:enabled .icon{
-    background-image: url(../../public_html/assets/icons/browser/regular/browse-ui-icons.png);
+    background-image: url(/public/img/browse-ui-icons.png);
 }
 
 div.toolbar-button:hover .icon{
-    background-image: url(../../public_html/assets/icons/browser/regular/browse-ui-icons.png);
+    background-image: url(/public/img/browse-ui-icons.png);
     
 }
 
@@ -637,7 +637,7 @@ body {
   width: 60px;
   height:24px;
   
-  background-image: url("../../public_html/assets/start.png");
+  background-image: url("/public/img/start.png");
   background-repeat: no-repeat;
   -o-background-size: cover;
   -moz-background-size: cover;

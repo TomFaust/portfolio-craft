@@ -52,13 +52,6 @@ const myObject = {
         delayRange: [13500,13500],
       }
     },
-    // paper_plane:{
-    //   weight:1,
-    //   plan:{
-    //     sprite: 'Me_paper_airplane.gif',
-    //     delayRange: [14500,14500],
-    //   }
-    // }
   };
   
   function getRandomDelay(min, max) {
@@ -92,7 +85,7 @@ async function iterateObjectWithDelay(obj) {
         });
       }
 
-      me.setAttribute("src", "assets/Sprites/" + entry.sprite);
+      me.setAttribute("src", "public/img/sprites/" + entry.sprite);
 
       if (entry.startFunction && typeof entry.startFunction === 'function') {
         entry.startFunction(); // Execute start function

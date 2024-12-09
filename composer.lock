@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "07d0cef3983c5f6bd361083e41f658c1",
+    "content-hash": "238a163e8d33e8189e96dbaf39c898ff",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -581,11 +581,6 @@
         {
             "name": "doctrine/deprecations",
             "version": "1.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "31610dbb31faa98e6b5447b62340826f54fbc4e9"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/deprecations/zipball/31610dbb31faa98e6b5447b62340826f54fbc4e9",
@@ -594,13 +589,6 @@
             },
             "require": {
                 "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^9 || ^12",
-                "phpstan/phpstan": "1.4.10 || 2.0.3",
-                "phpstan/phpstan-phpunit": "^1.0 || ^2",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
-                "psr/log": "^1 || ^2 || ^3"
             },
             "suggest": {
                 "psr/log": "Allows logging deprecations via PSR-3 logger implementation"
@@ -611,16 +599,11 @@
                     "Doctrine\\Deprecations\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "A small layer on top of trigger_error(E_USER_DEPRECATED) or PSR-3 logging with options to disable all deprecations or selectively for packages.",
             "homepage": "https://www.doctrine-project.org/",
-            "support": {
-                "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/1.1.4"
-            },
             "time": "2024-12-07T21:18:45+00:00"
         },
         {
@@ -1291,11 +1274,6 @@
         {
             "name": "league/uri",
             "version": "7.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/uri.git",
-                "reference": "81fb5145d2644324614cc532b28efd0215bda430"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/uri/zipball/81fb5145d2644324614cc532b28efd0215bda430",
@@ -1330,7 +1308,6 @@
                     "League\\Uri\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1364,28 +1341,11 @@
                 "url",
                 "ws"
             ],
-            "support": {
-                "docs": "https://uri.thephpleague.com",
-                "forum": "https://thephpleague.slack.com",
-                "issues": "https://github.com/thephpleague/uri-src/issues",
-                "source": "https://github.com/thephpleague/uri/tree/7.5.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/nyamsprod",
-                    "type": "github"
-                }
-            ],
             "time": "2024-12-08T08:40:02+00:00"
         },
         {
             "name": "league/uri-interfaces",
             "version": "7.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/uri-interfaces.git",
-                "reference": "08cfc6c4f3d811584fb09c37e2849e6a7f9b0742"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/08cfc6c4f3d811584fb09c37e2849e6a7f9b0742",
@@ -1416,7 +1376,6 @@
                     "League\\Uri\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1447,18 +1406,6 @@
                 "uri",
                 "url",
                 "ws"
-            ],
-            "support": {
-                "docs": "https://uri.thephpleague.com",
-                "forum": "https://thephpleague.slack.com",
-                "issues": "https://github.com/thephpleague/uri-src/issues",
-                "source": "https://github.com/thephpleague/uri-interfaces/tree/7.5.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/nyamsprod",
-                    "type": "github"
-                }
             ],
             "time": "2024-12-08T08:18:47+00:00"
         },
@@ -4248,12 +4195,12 @@
             "time": "2019-11-14T14:08:48+00:00"
         },
         {
-            "name": "tom-faust/craft-system-windows",
+            "name": "tom-faust/craft-portfolio-core",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "plugins/system-windows",
-                "reference": "8ceab00832743a59c883f6abba033cfd9694fd31"
+                "url": "plugins/portfolio-core",
+                "reference": "be52b28d767097638cddda867dfe385c497ff203"
             },
             "require": {
                 "craftcms/cms": "^5.5.0",
@@ -4265,14 +4212,14 @@
             },
             "type": "craft-plugin",
             "extra": {
-                "handle": "system-windows",
-                "name": "system-windows",
+                "handle": "_portfolio-core",
+                "name": "Portfolio Core",
                 "developer": "Tom Faust",
                 "documentationUrl": ""
             },
             "autoload": {
                 "psr-4": {
-                    "tomfaust\\craftsystemwindows\\": "src/"
+                    "tomfaust\\craftportfoliocore\\": "src/"
                 }
             },
             "scripts": {
@@ -5709,7 +5656,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "tom-faust/craft-system-windows": 20
+        "tom-faust/craft-portfolio-core": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -5718,5 +5665,5 @@
     "platform-overrides": {
         "php": "8.2"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

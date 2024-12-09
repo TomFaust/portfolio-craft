@@ -19,6 +19,7 @@ export class WelcomeFeatures{
             setTimeout(()=>{
                 let clickable = icon.querySelector('.clickable');
                 new ProgramWindow(
+                    "",
                     clickable.id,
                     "",
                     clickable.dataset.window? clickable.dataset.window: undefined,

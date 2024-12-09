@@ -18,6 +18,7 @@ icons.forEach((icon)=>{
 
 if(!localStorage.hasOwnProperty('ok_welcome')){
   new ProgramWindow(
+    window.welcome,
     'welcome',
     (self) => {
       let showEachTime = document.getElementById('showEachTime');
@@ -28,8 +29,6 @@ if(!localStorage.hasOwnProperty('ok_welcome')){
         }
       })
     },
-    "default",
-    "windows-0.png",
     0,
     0,
     0,
@@ -38,10 +37,9 @@ if(!localStorage.hasOwnProperty('ok_welcome')){
 
 function openMe(clickable){
   new ProgramWindow(
+    clickable.dataset.entryid,
     clickable.id,
     "",
-    clickable.dataset.window? clickable.dataset.window: undefined,
-    clickable.dataset.windowIcon? clickable.dataset.windowIcon: undefined,
     clickable.dataset.canDuplicate? +clickable.dataset.canDuplicate: undefined
   )
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace tomfaust\craftsystemwindows;
+namespace tomfaust\craftportfoliocore;
 
 use Craft;
 use craft\base\Plugin as BasePlugin;
 
 /**
- * system-windows plugin
+ * Portfolio Core plugin
  *
  * @method static Plugin getInstance()
  */

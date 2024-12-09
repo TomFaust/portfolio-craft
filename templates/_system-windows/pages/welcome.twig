@@ -1,5 +1,9 @@
 {% extends "_system-windows/layouts/" ~ layout %}
 
+{% block head %}
+    <img class="title-bar-icon" src="{{ titleIcon }}"> {{ title }}
+{% endblock %}
+
 {% block content %}
     <div class="header">
         <img src="assets/logo.png">

@@ -14,7 +14,7 @@ export class ProgramWindow{
     canMinimize;
     canMaximize;
 
-    constructor(id, done = null, layoutName = 'default', windowIcon = null, canDuplicate = 0, canMinimize = 1, canMaximize = 1, placeRandom = 1){
+    constructor(entryId = 0, id, done = null, canDuplicate = 0, canMinimize = 1, canMaximize = 1, placeRandom = 1){
 
         //create each window and tab first, so they can be referenced anywhere in the class
         let existingTab = document.getElementById(id + "_tab");
@@ -35,14 +35,16 @@ export class ProgramWindow{
         }else{
             this.tab = document.createElement('div');
             this.windowDiv = document.createElement('div');
-
-            this.createTab(id,windowIcon)
-            this.createWindow(id,done, layoutName,windowIcon)
-            this.setOnTop()
+            this.makeWindow(entryId,id,done);
         }
     }
 
-    createTab(tab_id,windowIcon){
+    async makeWindow(entryId,id,done){
+        await this.createWindow(entryId,id,done)
+        await this.setOnTop()
+    }
+
+    createTab(tab_id,iconUrl){
         //create the tab and add necessary classes
         this.tab.classList.add("window")
         this.tab.id = tab_id + "_tab"
@@ -56,9 +58,9 @@ export class ProgramWindow{
         }
 
         //add an icon to the tab if it was provided
-        if(windowIcon){
+        if(iconUrl){
             let icon = document.createElement("img")
-            icon.src = "assets/icons/" + windowIcon;
+            icon.src = iconUrl;
             this.tab.appendChild(icon)
         }
         this.tab.innerHTML += "<span>" + tab_id + "</span>"
@@ -66,23 +68,22 @@ export class ProgramWindow{
         document.getElementById("tabs").appendChild(this.tab)
     }
 
-    async createWindow(target,done,layoutName = "default",windowIcon){
+    async createWindow(entryId, target, done){
 
-        // /actions/system-windows/popup/get-content
         var self = this;
-        const response = await fetch('/actions/system-windows/popup/get-content', {
+        const response = await fetch('/actions/_portfolio-core/popup/get-content', {
             method: 'POST', headers: {
                 'Accept': 'application/json', 'Content-Type': 'application/json'
             }, body: JSON.stringify({ 
-                "layout": layoutName, 
-                "page": target,  
+                "page": target,
+                "entryId": entryId,  
                 [window.Craft.csrfTokenName]: window.Craft.csrfTokenValue 
             })
         }).then(response => {
-            return response.text();
+            return response.json();
         }).then(success => {
 
-            self.windowDiv.innerHTML = success;
+            self.windowDiv.innerHTML = success['content'];
             self.windowDiv = self.windowDiv.childNodes[0];
     
             let windowArea = self.windowDiv.getElementsByClassName("windowArea")[0];
@@ -92,15 +93,6 @@ export class ProgramWindow{
             self.windowDiv.id = tabName
     
             let titleBar = self.windowDiv.querySelector('.title-bar')
-
-            if(windowIcon){
-                let titleBarIcon = self.windowDiv.querySelector(".title-bar-icon");
-                titleBarIcon.src = "assets/icons/" + windowIcon;
-            }
-    
-            let titleBarText = self.windowDiv.querySelector(".title-bar-text")
-            let name = windowName.substring(0, windowName.length - 4)
-            titleBarText.innerHTML += name
     
             //check if miniminze is enabled, remove the button if its not
             let minimize = self.windowDiv.querySelector(".controls-minimize")
@@ -176,7 +168,9 @@ export class ProgramWindow{
     
             if(done){
                 done(self);
-            }     
+            }    
+            
+            this.createTab(success['title'],success['icon'])
 
         }).catch((error) => {
             console.error('Error:', error);
