@@ -17,15 +17,18 @@ Class CursorController extends Controller{
 
         $cursorEntry = $entry->relatedEntries->one();
         if($cursorEntry){
-
-            if($cursorEntry->normal->one() && $cursorEntry->pointer->one())
-
-            return $this->asJson([
-                'normal' => $cursorEntry->normal->one()->url,
-                'pointer' => $cursorEntry->pointer->one()->url
-            ]);
+            if($cursorEntry->normal->one() && $cursorEntry->pointer->one()){
+                return $this->asJson([
+                    'normal' => $cursorEntry->normal->one()->url,
+                    'pointer' => $cursorEntry->pointer->one()->url
+                ]);
+            }
         }
-        
+
+        return $this->asJson([
+            'normal' => null,
+            'pointer' => null
+        ]);
 
     }
 
