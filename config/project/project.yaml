@@ -1,4 +1,4 @@
-dateModified: 1733778931
+dateModified: 1733864374
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
@@ -13,17 +13,25 @@ fs:
     url: $ASSET_BASE_URL
 meta:
   __names__:
+    01a69c9a-b952-4a89-9b5c-24ad86df8558: 'Menu option' # Menu option
     1ef4c050-d814-47c6-9dbb-2449c83d9fa7: Files # Files
     5cbbc156-a371-4496-b3ac-59ef92544ad4: 'Content ID' # Content ID
     5dbfae60-be3c-4927-8d3a-f96448c7d460: 'portfolio-craft EN' # portfolio-craft EN
     6a3d40f8-2fc0-4970-83ff-d661ac632f5a: portfolio-craft # portfolio-craft
+    8bfc608a-38b7-45e6-9ddb-eb93390c8509: 'Related entries' # Related entries
+    9bea43b7-4dc0-4b23-aaff-de1542ed1d25: Cursors # Cursors
     42c395fa-2f2c-472c-a879-7dc4a5a674b4: 'Public Schema' # Public Schema
-    91df1c71-2eec-4714-9dbf-8bca03578466: Program # Program
+    74ad5976-0667-425c-9d28-9da4e19ee4b2: Menu # Menu
+    91df1c71-2eec-4714-9dbf-8bca03578466: Icon # Icon
     357a9117-f4c9-48f2-a5d4-d379e8bc0106: Display # Display
     643e2a1b-c91c-4e6a-9202-c9d35696ec1b: Icon # Icon
     686f9f04-92ac-4891-aed9-17766b5ca11c: 'Window Type' # Window Type
-    941efea7-0adc-4d0b-bc23-0852610418fe: Programs # Programs
+    803ba08e-ff62-46da-ac27-690cde4e4307: Cursor # Cursor
+    941efea7-0adc-4d0b-bc23-0852610418fe: Icons # Icons
+    51878c60-71bc-44b1-adc0-5ef67acf0686: Normal # Normal
     a9f99a5f-a049-46a8-bd54-4d21598bee37: 'Window icon' # Window icon
+    a89477f6-db77-4efe-ada2-dcb6bf2b1196: Pointer # Pointer
+    c533096a-5a5d-4e70-a0bc-98116828e93c: 'Link address' # Link address
     da878ded-8b92-4d04-bf6e-78fe822b5b8e: 'Can be duplicated?' # Can be duplicated?
     ecbaba17-c1a7-4e70-8a37-06a312e4de04: portfolio-craft # portfolio-craft
 plugins:

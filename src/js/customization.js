@@ -2,17 +2,17 @@ if(localStorage.hasOwnProperty("cursor")){
     switchCursors(localStorage.getItem("cursor"))
 }
 
-let cursors = document.getElementsByClassName("cursorOptions")
+let cursors = document.querySelectorAll("#cursorOptions li")
 
 for (let index = 0; index < cursors.length; index++) {
     cursors[index].addEventListener("click",fromMenu)
 }
 
 function fromMenu(event){
-    switchCursors(event.target.closest("a").id)
+    switchCursors(event.target.closest("li").dataset.entryid)
 }
 
-function switchCursors(cursor){
+async function switchCursors(cursor){
   
     localStorage.setItem("cursor", cursor)
 
@@ -25,16 +25,28 @@ function switchCursors(cursor){
             document.head.appendChild(styleTag);
         }
 
-        // Set the custom cursor styles
-        styleTag.textContent = `
-            body {
-              cursor: url('assets/${cursor}Cursor/normal.cur'), auto !important;
-            }
-    
-            .pointer {
-              cursor: url('assets/${cursor}Cursor/pointer.cur'), pointer !important;
-            }
-        `;
+        const response = await fetch('/actions/_portfolio-core/cursor/get-cursors', {
+            method: 'POST', headers: {
+                'Accept': 'application/json', 'Content-Type': 'application/json'
+            }, body: JSON.stringify({ 
+                "entryId": cursor,  
+                [window.Craft.csrfTokenName]: window.Craft.csrfTokenValue 
+            })
+        }).then(response => {
+            return response.json();
+        }).then(success => {
+
+            // Set the custom cursor styles
+            styleTag.textContent = `
+                body {
+                    cursor: url('${success["normal"]}'), auto !important;
+                }
+
+                .pointer {
+                    cursor: url('${success["pointer"]}'), pointer !important;
+                }
+            `;
+        })
     }else{
         var styleTag = document.getElementById('customCursorStyle');
         if (styleTag) {

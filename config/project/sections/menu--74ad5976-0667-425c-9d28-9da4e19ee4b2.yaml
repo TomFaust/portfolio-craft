@@ -1,0 +1,35 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 01a69c9a-b952-4a89-9b5c-24ad86df8558 # Menu option
+handle: menu
+maxAuthors: 1
+name: Menu
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5dbfae60-be3c-4927-8d3a-f96448c7d460: # portfolio-craft EN
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  6a3d40f8-2fc0-4970-83ff-d661ac632f5a: # portfolio-craft
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 2
+  uid: 04fbde13-fe70-46c7-b8d0-eefe9ba5a60c
+type: structure

@@ -6,10 +6,11 @@
   
     <div id="desktopIcons">
 
-        {% set icons = craft.entries.section('programs').display(1).all() %}
+        {% set icons = craft.entries.section('icons').display(1).all() %}
 
         {% for icon in icons %}
 
+          {% if icon.icon.one()|length %}
             <div class="icon">
                 <div 
                     class="pointer clickable" 
@@ -23,6 +24,7 @@
                 <label class="pointer selectedLabel">{{ icon.title }}</label>
                 </div>
             </div>
+          {% endif %}
 
         {% endfor %}
 
@@ -38,78 +40,46 @@
 
   </div>
 
+  <input class="hidden" type="file" id="file">
+
   <div class="window" id="taskbar">
     <ul class="dropdown">
-      <li>
-        <a href="#" class="pointer"></a>
-        
-        <ul class="window" id="mainMenu">
 
+      <li>
+         <a href="#" class="pointer"></a>
+         <ul class="window" id="mainMenu">
           <div id="menuSideBar"><p>Windows98</p></div>
 
-          <li class="silver">
-            <a href="#" class="pointer">
-              <img src="assets/W98Cursor/normal.cur" class="subImg">
-              <span>Cursor</span>
-              <arrow></arrow>
-            </a>
+            {% set options = craft.entries.section('menu').level(1).all() %}
 
-            <ul class="window">
-              <li><a class="cursorOptions pointer" id="Mario"><img class="subImg" src="assets/MarioCursor/normal.cur"><span>Mario</span></a></li>
-              <li><a class="cursorOptions pointer" id="RA"><img class="subImg" src="assets/RACursor/normal.cur"><span>Runescape</span></a></li>
-              <li><a class="cursorOptions pointer" id="MC"><img class="subImg" src="assets/MCCursor/normal.cur"><span>Minecraft</span></a></li>
-              <li><a class="cursorOptions pointer" id="W98"><img class="subImg" src="assets/W98Cursor/normal.cur"><span>Windows98</span></a></li>
-              <li><a class="cursorOptions pointer"><img src="assets/icons/remove.png" class="subImg"><span>Reset cursor</span></a></li>
-            </ul>
-          </li>
+            {% for option in options %}
+              {% if option.icon.one()|length %}
+                <li class="silver" id="{{ option.contentId }}" data-entryid="{{ option.id }}">
+                  <a href="{% if option.linkAddress|length %}{{ option.linkAddress }}{% else %}#{% endif %}" class="pointer">
+                    <img src="{{ option.icon.one().url }}" class="subImg">
+                    <span>{{ option.title }}</span>
+                    {% set children = option.getChildren().all() %}
+                    {% if children|length %}
+                      <arrow></arrow>
+                    {% endif %}
+                  </a>
+                  <ul class="window">
+                    {% for child in children %}
+                      {% if child.icon.one()|length %}
+                        <li id="{{ child.contentId }}" data-entryid="{{ child.id }}">
+                          <a class="pointer" href="{% if child.linkAddress|length %}{{ child.linkAddress }}{% else %}#{% endif %}">
+                            <img src="{{ child.icon.one().url }}" class="subImg">
+                            <span>{{ child.title }}</span>
+                          </a>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+            {% endfor %}
 
-          <li class="silver pointer">
-            <a href="#" class="pointer">
-              <img src="assets/icons/background.png" class="subImg">
-              <span>Background</span>
-              <arrow></arrow>
-            </a>
-            
-            <ul class="window">
-              <li id="openImgUpload">
-                <a class="pointer">
-                  <img src="assets/icons/upload.png" class="subImg">
-                  <span>Upload image</span>
-                  <input type="file" id="file">
-                </a>
-              </li>
-              <li id="removeBackground">
-                <a class="pointer">
-                  <img src="assets/icons/remove.png" class="subImg">
-                  <span>Reset background</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          <li class="silver pointer">
-            <a href="#" class="pointer">
-              <img src="assets/icons/keyboard-3.png" class="subImg">
-              <span>Languages</span>
-              <arrow></arrow>
-            </a>
-            <ul class="window">
-              <li class="language" data-language="nl">
-                <a class="pointer">
-                  <img src="assets/icons/placeholder.png" class="subImg">
-                  <span>Dutch</span>
-                </a>
-              </li>
-              <li class="language" data-language="en">
-                <a class="pointer">
-                  <img src="assets/icons/placeholder.png" class="subImg">
-                  <span>English</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-        </ul>
+         </ul> 
       </li>
     </ul>
 

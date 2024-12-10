@@ -1,10 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 91df1c71-2eec-4714-9dbf-8bca03578466 # Program
-handle: programs
+  - 91df1c71-2eec-4714-9dbf-8bca03578466 # Icon
+handle: icons
 maxAuthors: 1
-name: Programs
+name: Icons
 previewTargets:
   -
     __assoc__:
@@ -30,6 +30,6 @@ siteSettings:
     template: null
     uriFormat: null
 structure:
-  maxLevels: null
+  maxLevels: 1
   uid: 4aeae5c9-9902-4e7d-af5f-b9c97c57d088
 type: structure

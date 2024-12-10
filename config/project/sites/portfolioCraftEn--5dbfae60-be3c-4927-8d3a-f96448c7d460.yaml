@@ -2,7 +2,7 @@ baseUrl: $PRIMARY_SITE_URL_EN
 enabled: '1'
 handle: portfolioCraftEn
 hasUrls: true
-language: en-US
+language: en
 name: 'portfolio-craft EN'
 primary: false
 siteGroup: ecbaba17-c1a7-4e70-8a37-06a312e4de04 # portfolio-craft
