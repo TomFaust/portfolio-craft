@@ -21,7 +21,7 @@
     "src": "src/js/customization.js"
   },
   "src/js/main.css": {
-    "file": "assets/main-fb79f586.css",
+    "file": "assets/main-998b5bbe.css",
     "src": "src/js/main.css"
   },
   "src/js/main.js": {
@@ -32,9 +32,9 @@
       "assets/ms_sans_serif_bold-5f3fbc57.woff2"
     ],
     "css": [
-      "assets/main-fb79f586.css"
+      "assets/main-998b5bbe.css"
     ],
-    "file": "assets/main-aefd8909.js",
+    "file": "assets/main-d7bc24d3.js",
     "imports": [
       "src/js/timer.js",
       "src/js/customization.js",

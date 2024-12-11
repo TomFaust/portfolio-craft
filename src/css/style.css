@@ -499,8 +499,7 @@ div[role=tabpanel]{
                 color:#00f !important;
             }
 
-            #me-welcome{
-                background-image: url("../../public_html/assets/grey_clouds.png");
+            .about-me-panel{
                 background-size: 100% auto;
                 background-repeat: no-repeat;
                 -o-background-size: 100% auto;

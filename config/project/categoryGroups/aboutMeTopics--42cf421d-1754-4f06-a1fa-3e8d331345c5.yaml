@@ -1,0 +1,54 @@
+defaultPlacement: end
+fieldLayouts:
+  dfcd0417-b1f0-47d4-89ba-ae5fdd9220e0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-12-11T19:41:13+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: efce1fec-7193-4269-8131-478948b4be1f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: dee9581a-27b3-4bb2-a893-8de6d1c22b41
+        userCondition: null
+handle: aboutMeTopics
+name: 'About me topics'
+siteSettings:
+  5dbfae60-be3c-4927-8d3a-f96448c7d460: # portfolio-craft EN
+    hasUrls: false
+    template: null
+    uriFormat: null
+  6a3d40f8-2fc0-4970-83ff-d661ac632f5a: # portfolio-craft
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 433b4f6c-9d21-4fb3-a2cb-c448880529d7

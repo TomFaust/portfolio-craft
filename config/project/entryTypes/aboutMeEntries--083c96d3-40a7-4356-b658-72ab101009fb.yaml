@@ -1,0 +1,115 @@
+color: null
+fieldLayouts:
+  4a0bc56d-ce06-4fa2-a8f6-a4bd15b87337:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-12-11T19:31:55+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3dfe6f82-d285-4988-a1fc-1865ba380257
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-11T19:45:07+00:00'
+            elementCondition: null
+            fieldUid: efee04a0-8339-4651-b2f8-cb41af9e4c23 # Topic
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd1b5efa-ac2b-4c86-82d8-0e6b43f5b706
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-11T19:33:11+00:00'
+            elementCondition: null
+            fieldUid: 643e2a1b-c91c-4e6a-9202-c9d35696ec1b # Icon
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1752fa62-54ea-499e-bf2f-4bb9c5f4c100
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-11T20:09:12+00:00'
+            elementCondition: null
+            fieldUid: 425b468c-09d1-4045-9c3f-4fb36de779b1 # Background image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 316aecc8-cfc8-4db8-be28-82e8a6729272
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-11T19:34:04+00:00'
+            elementCondition: null
+            fieldUid: d4bc21ab-1729-4dcf-a03c-bae1b33ce69a # Body
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6264dc36-2cad-4684-bc63-7e6b24864d21
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 7db87aba-0040-4ba3-84f0-a8230b22d830
+        userCondition: null
+handle: aboutMeEntries
+hasTitleField: true
+icon: address-book
+name: 'About me entries'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: ''
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: ''
+titleTranslationMethod: site

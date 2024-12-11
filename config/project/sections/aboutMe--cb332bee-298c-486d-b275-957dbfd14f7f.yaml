@@ -1,0 +1,35 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 083c96d3-40a7-4356-b658-72ab101009fb # About me entries
+handle: aboutMe
+maxAuthors: 1
+name: 'About me'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5dbfae60-be3c-4927-8d3a-f96448c7d460: # portfolio-craft EN
+    enabledByDefault: true
+    hasUrls: true
+    template: about-me/_entry.twig
+    uriFormat: 'about-me/{slug}'
+  6a3d40f8-2fc0-4970-83ff-d661ac632f5a: # portfolio-craft
+    enabledByDefault: true
+    hasUrls: true
+    template: about-me/_entry.twig
+    uriFormat: 'about-me/{slug}'
+structure:
+  maxLevels: null
+  uid: 84825184-52b3-4f06-b371-fce6f3eeb196
+type: structure

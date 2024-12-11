@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: topic
+instructions: null
+name: Topic
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:42cf421d-1754-4f06-a1fa-3e8d331345c5' # About me topics
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

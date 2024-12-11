@@ -10,7 +10,7 @@
 
         {% for icon in icons %}
 
-          {% if icon.icon.one()|length %}
+          {% if icon.iconImg.one()|length %}
             <div class="icon">
                 <div 
                     class="pointer clickable" 
@@ -19,7 +19,7 @@
                     data-can-duplicate="{{ icon.canBeDuplicated }}"
                 >
                 <div class="iconImage">
-                    <img id="tableBanner" src="{{ icon.icon.one().url }}">
+                    <img id="tableBanner" src="{{ icon.iconImg.one().url }}">
                 </div>
                 <label class="pointer selectedLabel">{{ icon.title }}</label>
                 </div>
@@ -53,10 +53,10 @@
             {% set options = craft.entries.section('menu').level(1).all() %}
 
             {% for option in options %}
-              {% if option.icon.one()|length %}
+              {% if option.iconImg.one()|length %}
                 <li class="silver" id="{{ option.contentId }}" data-entryid="{{ option.id }}">
                   <a href="{% if option.linkAddress|length %}{{ option.linkAddress }}{% else %}#{% endif %}" class="pointer">
-                    <img src="{{ option.icon.one().url }}" class="subImg">
+                    <img src="{{ option.iconImg.one().url }}" class="subImg">
                     <span>{{ option.title }}</span>
                     {% set children = option.getChildren().all() %}
                     {% if children|length %}
@@ -65,10 +65,10 @@
                   </a>
                   <ul class="window">
                     {% for child in children %}
-                      {% if child.icon.one()|length %}
+                      {% if child.iconImg.one()|length %}
                         <li id="{{ child.contentId }}" data-entryid="{{ child.id }}">
                           <a class="pointer" href="{% if child.linkAddress|length %}{{ child.linkAddress }}{% else %}#{% endif %}">
-                            <img src="{{ child.icon.one().url }}" class="subImg">
+                            <img src="{{ child.iconImg.one().url }}" class="subImg">
                             <span>{{ child.title }}</span>
                           </a>
                         </li>

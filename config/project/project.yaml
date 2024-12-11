@@ -1,4 +1,4 @@
-dateModified: 1733864374
+dateModified: 1733948218
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
@@ -21,24 +21,35 @@ meta:
     8bfc608a-38b7-45e6-9ddb-eb93390c8509: 'Related entries' # Related entries
     9bea43b7-4dc0-4b23-aaff-de1542ed1d25: Cursors # Cursors
     42c395fa-2f2c-472c-a879-7dc4a5a674b4: 'Public Schema' # Public Schema
+    42cf421d-1754-4f06-a1fa-3e8d331345c5: 'About me topics' # About me topics
     74ad5976-0667-425c-9d28-9da4e19ee4b2: Menu # Menu
+    083c96d3-40a7-4356-b658-72ab101009fb: 'About me entries' # About me entries
     91df1c71-2eec-4714-9dbf-8bca03578466: Icon # Icon
     357a9117-f4c9-48f2-a5d4-d379e8bc0106: Display # Display
+    425b468c-09d1-4045-9c3f-4fb36de779b1: 'Background image' # Background image
     643e2a1b-c91c-4e6a-9202-c9d35696ec1b: Icon # Icon
     686f9f04-92ac-4891-aed9-17766b5ca11c: 'Window Type' # Window Type
     803ba08e-ff62-46da-ac27-690cde4e4307: Cursor # Cursor
     941efea7-0adc-4d0b-bc23-0852610418fe: Icons # Icons
+    9641bf8b-4fe2-4b5a-8db9-bf1c4f9dd9b1: Simple # Simple
     51878c60-71bc-44b1-adc0-5ef67acf0686: Normal # Normal
     a9f99a5f-a049-46a8-bd54-4d21598bee37: 'Window icon' # Window icon
     a89477f6-db77-4efe-ada2-dcb6bf2b1196: Pointer # Pointer
     c533096a-5a5d-4e70-a0bc-98116828e93c: 'Link address' # Link address
+    cb332bee-298c-486d-b275-957dbfd14f7f: 'About me' # About me
+    d4bc21ab-1729-4dcf-a03c-bae1b33ce69a: Body # Body
     da878ded-8b92-4d04-bf6e-78fe822b5b8e: 'Can be duplicated?' # Can be duplicated?
     ecbaba17-c1a7-4e70-8a37-06a312e4de04: portfolio-craft # portfolio-craft
+    efee04a0-8339-4651-b2f8-cb41af9e4c23: Topic # Topic
 plugins:
   _portfolio-core:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
   portfolio-core:
     edition: standard
     enabled: true

@@ -8,39 +8,57 @@
     <hr>
     <div class="content">
         <div class="sidebar">
+
+            {% set topics = craft.categories.group("aboutMeTopics").all() %}
+
             <div>
                 <menu role="tablist" class="multirows">
-                    <li role="tab"><a href="#tabs">Coding</a></li>
-                    <li role="tab"><a href="#tabs">Personal</a></li>
-                    <li role="tab"><a href="#tabs">Work</a></li>
+                    {% for topic in topics %}
+                        <li role="tab"><a href="#tabs">{{ topic.title }}</a></li>
+                    {% endfor %}
                 </menu>
             </div>
             
             <div class="window" role="tabpanel">
-                <ul class="tree-view">
-                    <li class="hidden"><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Welcome</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">PHP</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">HTML</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Javascript</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">CSS</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">C#</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Laravel</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Craft CMS</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Wordpress</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Python</a></li>
-                </ul>
-                <ul class="tree-view">
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Personality</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Hobbies</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Collection</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Pet</a></li>
-                </ul>
-                <ul class="tree-view">
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">IT-Bridge</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Chefmarketing</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Pixeldeluxe</a></li>
-                    <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">VionA</a></li>
-                </ul>
+
+                 {% for topic in topics %}
+                    {% set entries = craft.entries.section("aboutMe").relatedTo(topic).all() %}
+                    <ul class="tree-view">
+                        {% for entry in entries %}
+                            <li>
+                                <a href="#" class="contantGroup pointer">
+                                    <img src="{% if entry.iconImg.one() %} {{ entry.iconImg.one().url }} {% endif %}">
+                                    {{ entry.title}}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                 {% endfor %}
+
+                    <!-- <ul class="tree-view">
+                        <li class="hidden"><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Welcome</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">PHP</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">HTML</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Javascript</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">CSS</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">C#</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Laravel</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Craft CMS</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Wordpress</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Python</a></li>
+                    </ul>
+                    <ul class="tree-view">
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Personality</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Hobbies</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Collection</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Pet</a></li>
+                    </ul>
+                    <ul class="tree-view">
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">IT-Bridge</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Chefmarketing</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">Pixeldeluxe</a></li>
+                        <li><a href="#" class="contantGroup pointer"><img src="assets/icons/help_sheet-0.png">VionA</a></li>
+                    </ul> -->
             </div>
         </div>
 
@@ -49,39 +67,16 @@
         </div>
 
         <div class="main sunken-panel">
-            <div id="me-welcome">
-                0 - aka welcome
-            </div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-            <div>11</div>
-            <div>12</div>
-            <div>13</div>
-            <div>
-                <p><b>The IT-Bridge</b></p>
-                <p>
-                    The IT-Bridge was a small company started by a man named Micheal Jordan in collaboration with the college i was studying at.
-                    The place itself was tucked into the back corner of the college building, with the agreement between the college and
-                    Mister Jordan being that he was allowed to work in this space, provided he would take in interns and manage some small 
-                    things around the building, such as the digital displays in the hallway.
-                </p>
-                <p>
-                    My job mainly consisted of whatever Mister Jordan would ask of me, whether that would be working on small Wordpress websites he would 
-                    make for friends of his, tools to use around the IT-Bridge itself, or working on a website he was supposedly making for his son 
-                    (which to this day is not in use, but feel free to check for yourself <a target="_blank" href="https://bobjordan.nl">https://bobjordan.nl</a>). 
-                </p>
-            </div>
-            <div>15</div>
-            <div>16</div>
-            <div>17</div>
+
+            {% for topic in topics %}
+                {% set entries = craft.entries.section("aboutMe").relatedTo(topic).all() %}
+                {% for entry in entries %}
+                    <div class="about-me-panel" {% if entry.backgroundImage.one() %} style="background-image:url({{ entry.backgroundImage.one().url }})" {% endif %}>
+                        {{ entry.body }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+
         </div>
     </div>
 

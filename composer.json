@@ -2,6 +2,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
+    "craftcms/ckeditor": "4.4.0",
     "craftcms/cms": "^5.0.0",
     "nystudio107/craft-vite": "5.0.1",
     "tom-faust/craft-portfolio-core": "dev-main",
@@ -37,10 +38,6 @@
       "type": "composer",
       "url": "https://composer.craftcms.com",
       "canonical": false
-    },
-    {
-      "type": "path",
-      "url": "plugins/system-windows"
     },
     {
       "type": "path",
