@@ -1,0 +1,83 @@
+color: null
+fieldLayouts:
+  64f50613-6b57-4feb-8f8e-d1b43bc78d9b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-12-11T21:00:20+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d3af4498-bad2-4477-a0aa-6bc9e020110a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-11T21:01:48+00:00'
+            elementCondition: null
+            fieldUid: dfe1a1a4-9868-486f-bb56-0b187a82fde1 # Pdf file
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 403b9e34-a716-4992-9f20-52c3ccead409
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-11T21:01:48+00:00'
+            elementCondition: null
+            fieldUid: d4bc21ab-1729-4dcf-a03c-bae1b33ce69a # Body
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 23cf9848-c035-4434-ab4b-5d933152cff6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dd9ecc14-5129-4def-ba32-347f912eea5a
+        userCondition: null
+handle: cv
+hasTitleField: true
+icon: address-card
+name: CV
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: ''
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: ''
+titleTranslationMethod: site
