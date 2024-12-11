@@ -13,6 +13,11 @@
     width:600px;
 }
 
+#woodland_war_window{
+    height:200px;
+    width:600px;
+}
+
 #past_work_window{
     height:500px;
     width:800px;
@@ -58,6 +63,11 @@
         }
         
         #oh_bees_window{
+            height:100px;
+            width:250px;
+        }
+
+        #woodland_war_window{
             height:100px;
             width:250px;
         }
@@ -107,6 +117,11 @@
         }
         
         #oh_bees_window{
+            height:150px;
+            width:300px;
+        }
+
+        #woodland_war_window{
             height:150px;
             width:300px;
         }
