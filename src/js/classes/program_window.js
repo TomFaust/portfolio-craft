@@ -151,6 +151,8 @@ export class ProgramWindow{
                 case "about_me":
                     new Tablist(self.windowDiv,'li[role="tab"]','ul.tree-view','aria-selected')
                     new Tablist(self.windowDiv,'.tree-view li a','.main div','aria-selected')
+
+                    new History(self.windowDiv,"ul.tree-view li","dataset.panel","",".about-me-panel","click","welcome-to-about-me");
                     break;
                 case "past_work":
                     new History(self.windowDiv,".clickableIcon","dataset.panel",".address_select",".folderPanel","dblclick","main");

@@ -16,21 +16,22 @@ export class Tablist{
         })
 
         this.pages.forEach((page) =>{
-            page.style.display = "none"
+            page.classList.add('d-none');
         })
 
-        this.pages[0].style.display = "block"
+        this.pages[0].classList.remove('d-none');
         this.tabs[0].setAttribute(activeAttribute,'true')
     }
 
     SwitchTab(selectedTab){
+        console.log(selectedTab)
         this.tabs.forEach((tab,key) => {
             if(tab == selectedTab){
                 tab.setAttribute(this.activeAttribute,'true')
-                this.pages[key].style.display = "block"
+                this.pages[key].classList.remove('d-none');
             }else{
                 tab.setAttribute(this.activeAttribute,'false')
-                this.pages[key].style.display = "none";
+                this.pages[key].classList.add('d-none');
             }
         })
     }

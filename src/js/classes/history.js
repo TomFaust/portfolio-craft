@@ -18,7 +18,9 @@ export class History{
         this.backward = window.querySelector(".backward");
 
         this.interactibles = window.querySelectorAll(interactibles);
-        this.holders = window.querySelectorAll(holders);
+        if(holders){
+            this.holders = window.querySelectorAll(holders);
+        }
 
         this.screens = window.querySelectorAll(screens);
 
