@@ -30,7 +30,7 @@ export class FileExplorer{
             this.icons.forEach(icon =>{
 
                 let option = document.createElement('option');
-                option.innerText = "C:/portfolio/past_work/" + icon.dataset.panel;
+                option.innerText = "C:/portfolio/past_work/" + this.getPanelChainTitles(icon.dataset.panel);
                 option.value = icon.dataset.panel;
                 this.select.appendChild(option);
 
@@ -51,6 +51,41 @@ export class FileExplorer{
         }
         
     }
+
+    getPanelChainTitles(startPanel) {
+        const panels = document.querySelectorAll(".folderPanel");
+        const panelMap = {};
+        const titleMap = {};
+    
+        // Map data-panel to corresponding data-subject and data-title
+        panels.forEach(panel => {
+            const subject = panel.getAttribute("data-subject");
+            const icons = panel.querySelectorAll(".folderIcon");
+            icons.forEach(icon => {
+                const panelId = icon.getAttribute("data-panel");
+                const title = icon.querySelector("label")?.textContent.trim(); // Fetch title from label
+                if (panelId) {
+                    panelMap[panelId] = subject;
+                    titleMap[panelId] = title; // Store the title for the chain
+                }
+            });
+        });
+    
+        // Start from the initial panel and build the chain using titles
+        let chain = [];
+        let currentPanel = startPanel;
+    
+        while (currentPanel && titleMap[currentPanel]) {
+            let processedTitle = titleMap[currentPanel]
+                .toLowerCase() // Convert to lowercase
+                .replace(/\s+/g, "_"); // Replace spaces with underscores
+            chain.push(processedTitle); // Add the processed title to the chain
+            currentPanel = panelMap[currentPanel];
+        }
+    
+        return chain.reverse().join(" / "); // Combine titles into a chain
+    }
+    
 
     swapPanels(icon){
         this.panels.forEach(panel => {

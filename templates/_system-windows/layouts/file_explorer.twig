@@ -136,16 +136,31 @@
         </div>
     </div>
     <div class="windowArea">
-        {% block content %}
+        <div class="pre">
+            <div class="pre_inset fileExplorerGrid">
+                <div class="fileInfoPanel">
+                    <img src="/public/img/fileExplorer/open_folder.png">
+                    <p>Past work</p>
+                    <div class="rainbowLine">
+                        <div class="red"></div>
+                        <div class="orange"></div>
+                        <div class="green"></div>
+                        <div class="blue"></div>
+                    </div>
+                    <div></div>
+                </div>
+                {% block content %}
 
-        {% endblock %}
+                {% endblock %}
+            </div>
+        </div>
     </div>
     <div class="status-bar">
         <p class="status-bar-field">3 object(s)</p>
         <p class="status-bar-field"></p>
         <span class="status-bar-field"> 
             <span class="grid">
-                <img src="assets/icons/computer_explorer-2.png">
+                <img src="/public/img/fileExplorer/computer_explorer-2.png">
                 <span>My computer</span>
             </div>
         </span>
