@@ -16,7 +16,7 @@
     "src": "node_modules/98.css/dist/ms_sans_serif_bold.woff2"
   },
   "src/js/customization.js": {
-    "file": "assets/customization-5a100096.js",
+    "file": "assets/customization-ace46ce5.js",
     "isEntry": true,
     "src": "src/js/customization.js"
   },
@@ -34,7 +34,7 @@
     "css": [
       "assets/main-20529f17.css"
     ],
-    "file": "assets/main-df0da7d9.js",
+    "file": "assets/main-aba74848.js",
     "imports": [
       "src/js/timer.js",
       "src/js/customization.js",
