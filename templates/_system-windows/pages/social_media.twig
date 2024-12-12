@@ -12,7 +12,7 @@
         <div class="pre_inset pointer">
             {% for media in socialMedia %}
                 {% if media.image.one() %}
-                    <div class="browser_screen {% if not loop.first %}d-none{% endif %}" data-subject="{{ media.slug }}" data-url="{{ media.linkAddress }}">
+                    <div class="browser_screen {% if not loop.first %}d-none{% endif %}" {% if media.backgroundColor %}style="background-color: {{ media.backgroundColor }}"{%endif%} data-subject="{{ media.slug }}" data-url="{{ media.linkAddress }}">
                         <img 
                         src="{{ media.image.one().url }}">
                     </div>
