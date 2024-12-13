@@ -34,7 +34,7 @@
     "css": [
       "assets/main-20529f17.css"
     ],
-    "file": "assets/main-aba74848.js",
+    "file": "assets/main-0639ff94.js",
     "imports": [
       "src/js/timer.js",
       "src/js/customization.js",
@@ -55,7 +55,7 @@
     "src": "src/js/timer.js"
   },
   "src/js/windows.js": {
-    "file": "assets/windows-6ed1bd5d.js",
+    "file": "assets/windows-9c962873.js",
     "isEntry": true,
     "src": "src/js/windows.js"
   }

@@ -143,7 +143,7 @@ export class ProgramWindow{
             switch(target){
                 case "social_media":
                     new BrowserSwitch(self.windowDiv);
-                    new History(self.windowDiv,".address_select","value",".address_select",".browser_screen","change","linkedin");
+                    new History(self.windowDiv,".address_select","value",".address_select",".browser_screen","change","instagram");
                     break;
                 case "about_me":
                     new Tablist(self.windowDiv,'li[role="tab"]','ul.tree-view','aria-selected')
