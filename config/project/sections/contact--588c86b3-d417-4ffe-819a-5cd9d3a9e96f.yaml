@@ -1,0 +1,35 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 0e2c6c12-f0c0-40d0-a364-c123f2425a77 # Contact list
+handle: contact
+maxAuthors: 1
+name: Contact
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5dbfae60-be3c-4927-8d3a-f96448c7d460: # portfolio-craft EN
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  6a3d40f8-2fc0-4970-83ff-d661ac632f5a: # portfolio-craft
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 83dc74e1-766d-4cc3-a724-a21dde6b1e9b
+type: structure

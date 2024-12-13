@@ -1,4 +1,4 @@
-dateModified: 1734032177
+dateModified: 1734125488
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
@@ -13,6 +13,7 @@ fs:
     url: $ASSET_BASE_URL
 meta:
   __names__:
+    0e2c6c12-f0c0-40d0-a364-c123f2425a77: 'Contact list' # Contact list
     01a69c9a-b952-4a89-9b5c-24ad86df8558: 'Menu option' # Menu option
     1ef4c050-d814-47c6-9dbb-2449c83d9fa7: Files # Files
     5cbbc156-a371-4496-b3ac-59ef92544ad4: 'Content ID' # Content ID
@@ -32,6 +33,7 @@ meta:
     91df1c71-2eec-4714-9dbf-8bca03578466: Icon # Icon
     357a9117-f4c9-48f2-a5d4-d379e8bc0106: Display # Display
     425b468c-09d1-4045-9c3f-4fb36de779b1: 'Background image' # Background image
+    588c86b3-d417-4ffe-819a-5cd9d3a9e96f: Contact # Contact
     643e2a1b-c91c-4e6a-9202-c9d35696ec1b: Icon # Icon
     686f9f04-92ac-4891-aed9-17766b5ca11c: 'Window Type' # Window Type
     803ba08e-ff62-46da-ac27-690cde4e4307: Cursor # Cursor
@@ -50,6 +52,7 @@ meta:
     ecbaba17-c1a7-4e70-8a37-06a312e4de04: portfolio-craft # portfolio-craft
     efee04a0-8339-4651-b2f8-cb41af9e4c23: Topic # Topic
     f0582ffa-fa9f-4cfe-a72d-3d26eba3a594: 'Social media' # Social media
+    fc18808b-0848-403e-9b71-3493b62b47c0: 'Contact information' # Contact information
 plugins:
   _portfolio-core:
     edition: standard

@@ -24,7 +24,6 @@ export class Tablist{
     }
 
     SwitchTab(selectedTab){
-        console.log(selectedTab)
         this.tabs.forEach((tab,key) => {
             if(tab == selectedTab){
                 tab.setAttribute(this.activeAttribute,'true')

@@ -145,9 +145,6 @@ export class ProgramWindow{
                     new BrowserSwitch(self.windowDiv);
                     new History(self.windowDiv,".address_select","value",".address_select",".browser_screen","change","linkedin");
                     break;
-                case "my_properties":
-                    new Tablist(self.windowDiv,'li[role="tab"]','div.window-body','aria-selected')
-                    break;
                 case "about_me":
                     new Tablist(self.windowDiv,'li[role="tab"]','ul.tree-view','aria-selected')
                     new Tablist(self.windowDiv,'.tree-view li a','.main div','aria-selected')
