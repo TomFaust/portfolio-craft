@@ -104,7 +104,7 @@
 
             window.Craft = {{ csrfToken|json_encode|raw }};
 
-            {% set welcome = craft.entries.slug('welcome').one() %}
+            {% set welcome = craft.entries.section('icons').slug('welcome').one() %}
             {% if welcome %}
               window.welcome = {{ welcome.id }};
             {% endif %}
