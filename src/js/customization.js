@@ -25,7 +25,7 @@ async function switchCursors(cursor){
             document.head.appendChild(styleTag);
         }
 
-        const response = await fetch(window.location.href + '/actions/_portfolio-core/cursor/get-cursors', {
+        const response = await fetch(location.protocol + '//' + location.host+location.pathname + '/actions/_portfolio-core/cursor/get-cursors', {
             method: 'POST', headers: {
                 'Accept': 'application/json', 'Content-Type': 'application/json'
             }, body: JSON.stringify({ 
