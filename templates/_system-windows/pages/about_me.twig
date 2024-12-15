@@ -25,8 +25,8 @@
                     {% set entries = craft.entries.section("aboutMe").relatedTo(topic).all() %}
                     <ul class="tree-view">
                         {% for entry in entries %}
-                            <li data-panel="{{ entry.slug }}">
-                                <a href="#" class="contantGroup pointer">
+                            <li>
+                                <a href="#" class="contantGroup pointer" data-panel="{{ entry.slug }}">
                                     <img src="{% if entry.iconImg.one() %} {{ entry.iconImg.one().url }} {% endif %}">
                                     {{ entry.title}}
                                 </a>

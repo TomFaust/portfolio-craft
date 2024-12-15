@@ -1,5 +1,6 @@
 import { MaskIcon } from "./mask_icon.js";
 import { DoubletapHandler } from "./doubletap_handler.js";
+import eventDispatcher from './event_dispatcher.js';
 
 export class FileExplorer{
 
@@ -8,6 +9,7 @@ export class FileExplorer{
     select;
     foldericons;
     programs;
+    count;
 
     constructor(root){
         
@@ -16,9 +18,18 @@ export class FileExplorer{
         this.select = root.querySelector('.address_select');
         this.folderIcons = root.querySelectorAll('.folderIcon');
         this.programs = root.querySelectorAll('.openingIcon');
+        this.count = root.querySelector('#objects');
 
         this.folderIcons.forEach(folderIcon =>{
             new MaskIcon(folderIcon)
+        })
+
+        this.countObjects(this.panels[0])
+
+        eventDispatcher.addEventListener('history-change',(e) =>{
+            if(e.detail.window == root){
+                this.countObjects(e.detail.screen)
+            }
         })
 
         if(this.icons && this.panels){
@@ -92,9 +103,15 @@ export class FileExplorer{
             if(panel.dataset.subject === icon.dataset.panel){
                 this.select.value = icon.dataset.panel;
                 panel.classList.remove('d-none');
+                this.countObjects(panel);
             }else{
                 panel.classList.add('d-none');
             }
         })
+    }
+
+    countObjects(panel){
+        let icons = panel.querySelectorAll(".folderIcon");
+        this.count.innerText = icons.length;
     }
 }

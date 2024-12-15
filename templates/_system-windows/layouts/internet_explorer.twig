@@ -18,13 +18,15 @@
         
         <div class="options">
             <pre class="v-line-out"></pre>
-            <div class="item "><u>F</u>ile</div>
-            <div class="item "><u>E</u>dit</div>
-            <div class="item "><u>V</u>iew</div>
-            <div class="item "><u>G</u>o</div>
-            <div class="item "><u>F</u>avorites</div>
-            <div class="item "><u>T</u>ools</div>
-            <div class="item "><u>H</u>elp</div>
+
+            <div class="item ">{{ "<u>F</u>ile"|t|raw }}</div>
+            <div class="item ">{{ "<u>E</u>dit"|t|raw }}</div>
+            <div class="item ">{{ "<u>V</u>iew"|t|raw }}</div>
+            <div class="item ">{{ "<u>G</u>o"|t|raw }}</div>
+            <div class="item ">{{ "<u>F</u>avorites"|t|raw }}</div>
+            <div class="item ">{{ "<u>T</u>ools"|t|raw }}</div>
+            <div class="item ">{{ "<u>H</u>elp"|t|raw }}</div>
+
             <div class=" float-right">
                 <img class="browser-bar-image" src="/public/img/browser/internet_explorer_icon.png">
             </div>
@@ -36,7 +38,7 @@
             <div class="toolbar-button-wrapper">
                 <button class="toolbar-button backward" disabled>
                     <div class="icon"></div>
-                    <span class="label-text">Back</span>
+                    <span class="label-text">{{ "Back"|t }}</span>
                 </button>
                 <div class="svg-wrapper">
                     <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle">
@@ -49,7 +51,7 @@
             <div class="toolbar-button-wrapper">
                 <button class="toolbar-button forward" disabled>
                     <div class="icon" style="background-position: -20px 0px"></div>
-                    <span class="label-text">Forward</span>
+                    <span class="label-text">{{ "Forward"|t }}</span>
                 </button>
                 <div class="svg-wrapper">
                     <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle">
@@ -62,21 +64,21 @@
             <div class="toolbar-button-wrapper">
                 <button class="toolbar-button" disabled>
                     <div class="icon" style="background-position: -40px 0px"></div>
-                    <span class="label-text">Stop</span>
+                    <span class="label-text">{{ "Stop"|t }}</span>
                 </button>
             </div>
 
             <div class="toolbar-button-wrapper">
                 <button class="toolbar-button " disabled>
                     <div class="icon" style="background-position: -60px 0px"></div>
-                    <span class="label-text">Refresh</span>
+                    <span class="label-text">{{ "Refresh"|t }}</span>
                 </button>
             </div>
 
             <div class="toolbar-button-wrapper">
                 <button class="toolbar-button " disabled>
                     <div class="icon" style="background-position: -80px 0px"></div>
-                    <span class="label-text">Home</span>
+                    <span class="label-text">{{ "Home"|t }}</span>
                 </button>
             </div>
 
@@ -85,21 +87,21 @@
             <div class="toolbar-button-wrapper">
                 <button class="toolbar-button " disabled>
                     <div class="icon" style="background-position: -100px 0px"></div>
-                    <span class="label-text">Search</span>
+                    <span class="label-text">{{ "Search"|t }}</span>
                 </button>
             </div>
 
             <div class="toolbar-button-wrapper">
                 <button class="toolbar-button " disabled>
                     <div class="icon" style="background-position: -120px 0px"></div>
-                    <span class="label-text">Favorites</span>
+                    <span class="label-text">{{ "Favorites"|t }}</span>
                 </button>
             </div>
 
             <div class="toolbar-button-wrapper">
                 <button class="toolbar-button " disabled>
                     <div class="icon" style="background-position: -140px 0px"></div>
-                    <span class="label-text">History</span>
+                    <span class="label-text">{{ "History"|t }}</span>
                 </button>
             </div>
 
@@ -108,14 +110,14 @@
             <div class="toolbar-button-wrapper">
                 <button class="toolbar-button " disabled>
                     <div class="icon" style="background-position: -240px 0px"></div>
-                    <span class="label-text">Print</span>
+                    <span class="label-text">{{ "Print"|t }}</span>
                 </button>
             </div>
         </div>
         <hr>
         <div class="options">
             <pre class="v-line-out"></pre>
-            <div class="item">Address</div>
+            <div class="item">{{ "Address"|t }}</div>
             <select id="address_select" class="address_select pointer">
             </select>
         </div>

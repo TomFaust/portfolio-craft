@@ -85,7 +85,7 @@ async function iterateObjectWithDelay(obj) {
         });
       }
 
-      me.setAttribute("src", "public/img/sprites/" + entry.sprite);
+      me.setAttribute("src", "/public/img/sprites/" + entry.sprite);
 
       if (entry.startFunction && typeof entry.startFunction === 'function') {
         entry.startFunction(); // Execute start function

@@ -1,4 +1,5 @@
 import { DoubletapHandler } from "./doubletap_handler.js";
+import eventDispatcher from './event_dispatcher.js';
 
 export class History{
 
@@ -13,7 +14,10 @@ export class History{
     interactibles = [];
     holders = [];
 
-    constructor(window,interactibles,attribute,holders,screens,action,init = null){
+    window;
+
+    constructor(window,interactibles,attribute,holders,screens,action){
+        this.window = window
         this.forward = window.querySelector(".forward");
         this.backward = window.querySelector(".backward");
 
@@ -23,33 +27,38 @@ export class History{
         }
 
         this.screens = window.querySelectorAll(screens);
-
-        if(init){
-            this.history.push(init)
-        }
+        this.history.push(this.screens[0].dataset.subject)
+        
 
         this.interactibles.forEach(interactible => {
             interactible.addEventListener(action,(e)=>{
-                this.history = this.history.slice(0, this.historyPos + 1);
+                let newEntry = eval("interactible."+ attribute);
 
-                this.history.push(eval("interactible."+ attribute));
-                this.historyPos++;
+                if(this.history[this.historyPos] !== newEntry){
+                    this.history = this.history.slice(0, this.historyPos + 1);
 
-                this.backward.disabled = false;
-                this.forward.disabled = true;
+                    this.history.push(newEntry);
+                    this.historyPos++;
+
+                    this.backward.disabled = false;
+                    this.forward.disabled = true;
+                }
+                
             })
 
             if(action === "dblclick"){
                 new DoubletapHandler(interactible, () =>{
+                    let newEntry = eval("interactible."+ attribute);
+                    
+                    if(this.history[this.historyPos] !== newEntry){
+                        this.history = this.history.slice(0, this.historyPos + 1);
 
-                    this.history = this.history.slice(0, this.historyPos + 1);
-
-                    this.history.push(eval("interactible."+ attribute));
-                    this.historyPos++;
-            
-                    this.backward.disabled = false;
-                    this.forward.disabled = true;
-
+                        this.history.push(newEntry);
+                        this.historyPos++;
+                
+                        this.backward.disabled = false;
+                        this.forward.disabled = true;
+                    }
                 })
             }
         })
@@ -102,11 +111,19 @@ export class History{
         this.screens.forEach(screen => {
             if(screen.dataset.subject == this.history[this.historyPos]){
                 screen.classList.remove('d-none');
+
+                const historyEvent = new CustomEvent("history-change", { bubbles: true, detail: {
+                    screen: screen,
+                    window: this.window
+                }});
+
+                eventDispatcher.dispatchEvent(historyEvent)
+
             }else{
                 screen.classList.add('d-none');
             }
         })
+          
     }
-    
 
 }
