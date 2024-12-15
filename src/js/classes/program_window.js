@@ -71,7 +71,7 @@ export class ProgramWindow{
     async createWindow(entryId, target, done){
 
         var self = this;
-        const response = await fetch('actions/_portfolio-core/popup/get-content', {
+        const response = await fetch(window.location.href + '/actions/_portfolio-core/popup/get-content', {
             method: 'POST', headers: {
                 'Accept': 'application/json', 'Content-Type': 'application/json'
             }, body: JSON.stringify({ 

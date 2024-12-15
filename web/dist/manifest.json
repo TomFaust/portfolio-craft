@@ -16,7 +16,7 @@
     "src": "node_modules/98.css/dist/ms_sans_serif_bold.woff2"
   },
   "src/js/customization.js": {
-    "file": "assets/customization-ace46ce5.js",
+    "file": "assets/customization-35f10aff.js",
     "isEntry": true,
     "src": "src/js/customization.js"
   },
@@ -34,7 +34,7 @@
     "css": [
       "assets/main-20529f17.css"
     ],
-    "file": "assets/main-6c8bd51a.js",
+    "file": "assets/main-ad41fc5f.js",
     "imports": [
       "src/js/timer.js",
       "src/js/customization.js",
@@ -55,7 +55,7 @@
     "src": "src/js/timer.js"
   },
   "src/js/windows.js": {
-    "file": "assets/windows-6bdce76e.js",
+    "file": "assets/windows-5c526db3.js",
     "isEntry": true,
     "src": "src/js/windows.js"
   }

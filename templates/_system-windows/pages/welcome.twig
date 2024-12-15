@@ -1,7 +1,7 @@
 {% extends "_system-windows/layouts/" ~ layout %}
 
 {% block head %}
-    <img class="title-bar-icon" src="{{ titleIcon }}"> {{ title }}
+    <img class="title-bar-icon" src="{{ titleIcon }}"> {{ snakeTitle }}
 {% endblock %}
 
 {% block content %}
@@ -15,7 +15,7 @@
     <div class="main">
         <div class="explore">
             <div class="exploreContent">
-                CONTENTS
+                {{ "CONTENTS"|t }}
             </div>
             {% for welcomeButton in entry.welcomeButtons %}
                 <div class="exploreButton pointer " id="welcome-{{ welcomeButton.id }}">

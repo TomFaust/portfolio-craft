@@ -41,6 +41,7 @@ return [
     "My computer" => "My computer",
     "object(s)" => "object(s)",
 
+    "CONTENTS" => "CONTENTS",
     "Show this screen each time my portfolio starts" => "Show this screen each time my portfolio starts",
 
     "Name" => "Name",

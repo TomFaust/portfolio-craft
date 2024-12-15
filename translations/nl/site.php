@@ -41,6 +41,7 @@ return [
     "My computer" => "Mijn computer",
     "object(s)" => "object(en)",
 
+    "CONTENTS" => "INHOUD",
     "Show this screen each time my portfolio starts" => "Laat dit scherm zien iedere keer dat mijn portfolio opstart",
 
     "Name" => "Naam",
