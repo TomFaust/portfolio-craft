@@ -1,0 +1,131 @@
+color: null
+fieldLayouts:
+  1811558e-38d2-4b97-bc11-6ac23ddda1db:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-12-16T19:19:00+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 4961a864-f5da-45aa-b222-823ca584f910
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-16T19:19:00+00:00'
+            elementCondition: null
+            fieldUid: 55939807-2034-4c34-830d-bde0ce5bb80e # Sprite
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 43235780-47df-47b7-b9de-fbe4bb3df72b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-16T19:19:00+00:00'
+            elementCondition: null
+            fieldUid: ef806f12-f5a9-46be-a00f-2b6698c59daa # Minimum delay
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5da4fb52-be87-4f48-8f06-f785e094a89c
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2024-12-16T19:19:00+00:00'
+            elementCondition: null
+            fieldUid: 6293ddc5-2023-44c8-8f59-bcbe159ae8fd # Maximum delay
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7460fd88-d994-416a-a8f6-0c0b9b8c4306
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2024-12-16T19:19:00+00:00'
+            elementCondition: null
+            fieldUid: 31b99758-32c5-4b2b-a8f2-cb4c1a831b02 # Function
+            handle: startFunction
+            includeInCards: false
+            instructions: null
+            label: 'Start function'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 799bd7cd-017b-4dcc-a349-d2c30a6d975a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-16T19:19:00+00:00'
+            elementCondition: null
+            fieldUid: 31b99758-32c5-4b2b-a8f2-cb4c1a831b02 # Function
+            handle: endFunction
+            includeInCards: false
+            instructions: null
+            label: 'End function'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 98ebf827-0b6d-48f3-86a7-e6f77dee0b16
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6c795b30-f08b-451f-b089-5775d62c50af
+        userCondition: null
+handle: spriteOption
+hasTitleField: true
+icon: child
+name: 'Sprite option'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

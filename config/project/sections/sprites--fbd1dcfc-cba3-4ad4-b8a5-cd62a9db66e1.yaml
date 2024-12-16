@@ -1,0 +1,32 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 178072f8-fe60-459f-86bf-87691e5bb768 # Sprite
+handle: sprites
+maxAuthors: 1
+name: Sprites
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5dbfae60-be3c-4927-8d3a-f96448c7d460: # portfolio-craft EN
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  6a3d40f8-2fc0-4970-83ff-d661ac632f5a: # portfolio-craft
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

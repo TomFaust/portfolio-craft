@@ -1,4 +1,4 @@
-dateModified: 1734358455
+dateModified: 1734377529
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
@@ -46,20 +46,24 @@ meta:
     6293ddc5-2023-44c8-8f59-bcbe159ae8fd: 'Maximum delay' # Maximum delay
     9641bf8b-4fe2-4b5a-8db9-bf1c4f9dd9b1: Simple # Simple
     51878c60-71bc-44b1-adc0-5ef67acf0686: Normal # Normal
+    178072f8-fe60-459f-86bf-87691e5bb768: Sprite # Sprite
     55939807-2034-4c34-830d-bde0ce5bb80e: Sprite # Sprite
     a9f99a5f-a049-46a8-bd54-4d21598bee37: 'Window icon' # Window icon
     a89477f6-db77-4efe-ada2-dcb6bf2b1196: Pointer # Pointer
     ab6e59b5-86aa-43e3-b11c-d4caf58c260c: CV # CV
+    ae9e8c04-b7c2-4426-981a-0dbe15621362: 'Sprite option' # Sprite option
     b2ffb493-b152-4dc2-b7d4-ef22f7c27bc5: Image # Image
     c533096a-5a5d-4e70-a0bc-98116828e93c: 'Link address' # Link address
     cb332bee-298c-486d-b275-957dbfd14f7f: 'About me' # About me
     d4bc21ab-1729-4dcf-a03c-bae1b33ce69a: Body # Body
+    d5994ae2-f141-4ad9-ae59-9262bbb245bc: 'Sprite options' # Sprite options
     da878ded-8b92-4d04-bf6e-78fe822b5b8e: 'Can be duplicated?' # Can be duplicated?
     dfe1a1a4-9868-486f-bb56-0b187a82fde1: 'Pdf file' # Pdf file
     ecbaba17-c1a7-4e70-8a37-06a312e4de04: portfolio-craft # portfolio-craft
     ef806f12-f5a9-46be-a00f-2b6698c59daa: 'Minimum delay' # Minimum delay
     efee04a0-8339-4651-b2f8-cb41af9e4c23: Topic # Topic
     f0582ffa-fa9f-4cfe-a72d-3d26eba3a594: 'Social media' # Social media
+    fbd1dcfc-cba3-4ad4-b8a5-cd62a9db66e1: Sprites # Sprites
     fc18808b-0848-403e-9b71-3493b62b47c0: 'Contact information' # Contact information
 plugins:
   _portfolio-core:

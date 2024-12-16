@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: spriteOptions
+instructions: null
+name: 'Sprite options'
+searchable: false
+settings:
+  createButtonLabel: 'New sprite option'
+  defaultIndexViewMode: cards
+  entryTypes:
+    - ae9e8c04-b7c2-4426-981a-0dbe15621362 # Sprite option
+  includeTableView: false
+  maxEntries: null
+  minEntries: 1
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

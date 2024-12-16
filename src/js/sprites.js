@@ -1,3 +1,5 @@
+import { Exception } from "sass";
+
 let me = document.getElementById('me');
 let speech = document.getElementById('speechBubble');
 
@@ -16,48 +18,16 @@ let facts = [
     "The fog is coming...",
     "Flesk"
 ]
+
+const functionMap = {
+  startSpeech: (variable) => startSpeech(variable),
+  endSpeech: (variable) => endSpeech(variable)
+};
   
-const myObject = {
-    idle1: {
-      weight:1,
-      idle_left: {
-          sprite: 'Me_idle_left.gif',
-          delayRange: [2000, 10000]
-      }
-    },
-    idle2: {
-      weight:1,
-      idle_right: {
-          sprite: 'Me_idle_right.gif',
-          delayRange: [2000, 10000]
-      }
-    },
-    talk: {
-      weight:1,
-      alert: { 
-          sprite: 'Me_alert.gif', 
-          delayRange: [2000, 2000] 
-      },
-      talk: { 
-          sprite: 'Me_talk.gif', 
-          delayRange: [10000, 15000],
-          startFunction: startSpeech,
-          endFunction: endSpeech 
-      },
-    },
-    yoyo: {
-      weight:1,
-      yoyo:{
-        sprite: 'Me_yoyo.gif',
-        delayRange: [13500,13500],
-      }
-    },
-  };
-  
-  function getRandomDelay(min, max) {
-    const delay = Math.floor(Math.random() * (max - min + 1) + min);
-    return Math.round(delay / 500) * 500; // Round delay to the nearest multiple of 0.5 seconds (500 milliseconds)
-  }
+function getRandomDelay(min, max) {
+  const delay = Math.floor(Math.random() * (max - min + 1) + min);
+  return Math.round(delay / 500) * 500; // Round delay to the nearest multiple of 0.5 seconds (500 milliseconds)
+}
 
  
 async function iterateObjectWithDelay(obj) {
@@ -85,10 +55,15 @@ async function iterateObjectWithDelay(obj) {
         });
       }
 
-      me.setAttribute("src", "/public/img/sprites/" + entry.sprite);
+      me.setAttribute("src", entry.sprite);
 
-      if (entry.startFunction && typeof entry.startFunction === 'function') {
-        entry.startFunction(); // Execute start function
+      if (entry.startFunction) {
+        let functionName = entry.startFunction
+        if(entry.startVariable){
+          functionMap[functionName](entry.startVariable); // Execute start function
+        }else{
+          functionMap[functionName]();
+        }
       }
 
       const [minDelay, maxDelay] = entry.delayRange;
@@ -97,8 +72,12 @@ async function iterateObjectWithDelay(obj) {
       // Wait for the specified delay before proceeding to the next iteration
       await new Promise(resolve => setTimeout(resolve, delay));
 
-      if (entry.endFunction && typeof entry.endFunction === 'function') {
-        entry.endFunction(); // Execute end function
+      if (entry.endFunction) {
+        if(entry.endVariable){
+          functionMap[entry.endFunction](entry.endVariable); // Execute end function
+        }else{
+          functionMap[entry.endFunction]();
+        }
       }
     }
   }
@@ -140,6 +119,23 @@ function weightedRandomSelection(array) {
   }
 }
 
-  
-// Usage
-iterateObjectWithDelay(myObject);
+async function fetchSpriteData(){
+  const response = await fetch(location.protocol + '//' + location.host+location.pathname + '/actions/_portfolio-core/sprites/get-data', {
+    method: 'POST', headers: {
+        'Accept': 'application/json', 'Content-Type': 'application/json'
+    }, body: JSON.stringify({ 
+        [window.Craft.csrfTokenName]: window.Craft.csrfTokenValue 
+    })
+  }).then(response => {
+    if(response.ok){
+      return response.json();
+    }
+    throw new Exception("something went wrong");
+  }).then(success => {
+    iterateObjectWithDelay(success);
+  });
+
+}
+
+fetchSpriteData();
+
