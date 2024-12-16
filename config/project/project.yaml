@@ -1,4 +1,4 @@
-dateModified: 1734212775
+dateModified: 1734358455
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
@@ -24,10 +24,12 @@ meta:
     6e769d75-e442-4b05-ba57-e73cb899fa01: 'Background color' # Background color
     7f79c45d-f61f-468d-ba54-dbb8d1392a1b: 'Past work' # Past work
     8bfc608a-38b7-45e6-9ddb-eb93390c8509: 'Related entries' # Related entries
+    8ceb6a8b-58a4-48da-889e-feedc2330963: Weight # Weight
     9bea43b7-4dc0-4b23-aaff-de1542ed1d25: Cursors # Cursors
     11f7aaad-caf4-471a-97c9-9b70a976f8ac: CV # CV
     017bb80c-d54d-429b-ab44-a3f221b8a4e9: Welcome # Welcome
     18cdd73c-6b27-4d28-8dfc-40bd682e5fb3: 'Social media' # Social media
+    31b99758-32c5-4b2b-a8f2-cb4c1a831b02: Function # Function
     42c395fa-2f2c-472c-a879-7dc4a5a674b4: 'Public Schema' # Public Schema
     42cf421d-1754-4f06-a1fa-3e8d331345c5: 'About me topics' # About me topics
     44bff4d4-3cea-4c2d-8f3c-5d95fb9625a5: 'Welcome Buttons' # Welcome Buttons
@@ -41,8 +43,10 @@ meta:
     686f9f04-92ac-4891-aed9-17766b5ca11c: 'Window Type' # Window Type
     803ba08e-ff62-46da-ac27-690cde4e4307: Cursor # Cursor
     941efea7-0adc-4d0b-bc23-0852610418fe: Icons # Icons
+    6293ddc5-2023-44c8-8f59-bcbe159ae8fd: 'Maximum delay' # Maximum delay
     9641bf8b-4fe2-4b5a-8db9-bf1c4f9dd9b1: Simple # Simple
     51878c60-71bc-44b1-adc0-5ef67acf0686: Normal # Normal
+    55939807-2034-4c34-830d-bde0ce5bb80e: Sprite # Sprite
     a9f99a5f-a049-46a8-bd54-4d21598bee37: 'Window icon' # Window icon
     a89477f6-db77-4efe-ada2-dcb6bf2b1196: Pointer # Pointer
     ab6e59b5-86aa-43e3-b11c-d4caf58c260c: CV # CV
@@ -53,6 +57,7 @@ meta:
     da878ded-8b92-4d04-bf6e-78fe822b5b8e: 'Can be duplicated?' # Can be duplicated?
     dfe1a1a4-9868-486f-bb56-0b187a82fde1: 'Pdf file' # Pdf file
     ecbaba17-c1a7-4e70-8a37-06a312e4de04: portfolio-craft # portfolio-craft
+    ef806f12-f5a9-46be-a00f-2b6698c59daa: 'Minimum delay' # Minimum delay
     efee04a0-8339-4651-b2f8-cb41af9e4c23: Topic # Topic
     f0582ffa-fa9f-4cfe-a72d-3d26eba3a594: 'Social media' # Social media
     fc18808b-0848-403e-9b71-3493b62b47c0: 'Contact information' # Contact information
