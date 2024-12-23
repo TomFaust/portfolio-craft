@@ -25,6 +25,12 @@ export class ProgramWindow{
         this.canMaximize = canMaximize
         this.canMinimize = canMinimize
 
+        if(!canDuplicate){
+            if(FetchManager.isCallOngoing(`call-${entryId}`)){
+                return null;
+            }
+        }
+
         //some windows can have multiple instances for authenticity
         //if duplication is not allowed, attempt to open the already active window
         if (existingWindow && existingTab && !canDuplicate){
@@ -33,13 +39,7 @@ export class ProgramWindow{
             }else{
                 this.setOnTop(existingWindow)
             }
-        }else{
-            if(!canDuplicate){
-                if(FetchManager.isCallOngoing(`call-${entryId}`)){
-                    return null;
-                }
-            }
-            
+        }else{            
             this.tab = document.createElement('div');
             this.windowDiv = document.createElement('div');
             this.makeWindow(entryId,id,done);
@@ -51,10 +51,10 @@ export class ProgramWindow{
         await this.setOnTop()
     }
 
-    createTab(tab_id,iconUrl){
+    createTab(tab_id,id,iconUrl){
         //create the tab and add necessary classes
         this.tab.classList.add("window")
-        this.tab.id = tab_id + "_tab"
+        this.tab.id = id + "_tab"
         this.tab.classList.add("tab")
         this.tab.classList.add("openTab")
         this.tab.classList.add("title-bar")
@@ -178,7 +178,7 @@ export class ProgramWindow{
                 done(self);
             }    
             
-            this.createTab(success['title'],success['icon'])
+            this.createTab(success['title'],target,success['icon'])
             FetchManager.endCall(`call-${entryId}`);
 
         }).catch((error) => {

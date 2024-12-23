@@ -40,7 +40,7 @@ function openMe(clickable){
     clickable.dataset.entryid,
     clickable.id,
     "",
-    clickable.dataset.canDuplicate? + clickable.dataset.canDuplicate: undefined
+    clickable.dataset.canDuplicate? + clickable.dataset.canDuplicate: 0
   )
 }
 
