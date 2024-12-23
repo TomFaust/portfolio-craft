@@ -1,6 +1,6 @@
 import { MaskIcon } from "./mask_icon.js";
-import { DoubletapHandler } from "./doubletap_handler.js";
-import eventDispatcher from './event_dispatcher.js';
+import { DoubletapHandler } from "../managers/doubletap_handler.js";
+import eventDispatcher from '../managers/event_dispatcher.js';
 
 export class FileExplorer{
 

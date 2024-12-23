@@ -1,4 +1,4 @@
-import { DoubletapHandler } from "./doubletap_handler.js";
+import { DoubletapHandler } from "../managers/doubletap_handler.js";
 
 export class MaskIcon{
 

@@ -5,6 +5,7 @@ import { FileExplorer } from "./file_explorer.js";
 import { InteractiveTable } from "./interactive_table.js";
 import { Search } from "./search.js";
 import { WelcomeFeatures } from "./welcome_features.js";
+import { FetchManager } from "../managers/fetch_manager.js";
 
 export class ProgramWindow{
 
@@ -33,6 +34,12 @@ export class ProgramWindow{
                 this.setOnTop(existingWindow)
             }
         }else{
+            if(!canDuplicate){
+                if(FetchManager.isCallOngoing(`call-${entryId}`)){
+                    return null;
+                }
+            }
+            
             this.tab = document.createElement('div');
             this.windowDiv = document.createElement('div');
             this.makeWindow(entryId,id,done);
@@ -69,6 +76,8 @@ export class ProgramWindow{
     }
 
     async createWindow(entryId, target, done){
+
+        FetchManager.startCall(`call-${entryId}`);
 
         var self = this;
         const response = await fetch(location.protocol + '//' + location.host+location.pathname + '/actions/_portfolio-core/popup/get-content', {
@@ -170,8 +179,10 @@ export class ProgramWindow{
             }    
             
             this.createTab(success['title'],success['icon'])
+            FetchManager.endCall(`call-${entryId}`);
 
         }).catch((error) => {
+            FetchManager.endCall(`call-${entryId}`);
             console.error('Error:', error);
         });
     }

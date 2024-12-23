@@ -1,6 +1,6 @@
 import { ProgramWindow } from "./classes/program_window.js";
 import { MaskIcon } from "./classes/mask_icon.js";
-import { DoubletapHandler } from "./classes/doubletap_handler.js";
+import { DoubletapHandler } from "./managers/doubletap_handler.js";
 
 let iconContainer = document.querySelector('#desktopIcons');
 let icons = iconContainer.querySelectorAll(".icon")
@@ -40,7 +40,7 @@ function openMe(clickable){
     clickable.dataset.entryid,
     clickable.id,
     "",
-    clickable.dataset.canDuplicate? +clickable.dataset.canDuplicate: undefined
+    clickable.dataset.canDuplicate? + clickable.dataset.canDuplicate: undefined
   )
 }
 
