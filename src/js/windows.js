@@ -32,6 +32,7 @@ if(!localStorage.hasOwnProperty('ok_welcome')){
     0,
     0,
     0,
+    0
   )
 }
 

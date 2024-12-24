@@ -14,6 +14,7 @@ export class ProgramWindow{
     pos1 = 0; pos2 = 0; pos3 = 0; pos4 = 0;
     canMinimize;
     canMaximize;
+    placeRandom;
 
     constructor(entryId = 0, id, done = null, canDuplicate = 0, canMinimize = 1, canMaximize = 1, placeRandom = 1){
 
@@ -24,6 +25,7 @@ export class ProgramWindow{
         //some windows should not have these options
         this.canMaximize = canMaximize
         this.canMinimize = canMinimize
+        this.placeRandom = placeRandom
 
         if(!canDuplicate){
             if(FetchManager.isCallOngoing(`call-${entryId}`)){
@@ -132,17 +134,22 @@ export class ProgramWindow{
 
             //add the created window onto the page
             document.getElementById("container").appendChild(self.windowDiv)
-    
 
-
-            let randomPercentage = Math.floor(Math.random() * 100) + 1;
-            let topPosition = (window.innerHeight - self.windowDiv.clientHeight) * (randomPercentage / 100);
-            self.windowDiv.style.top = (topPosition / window.innerHeight * 100) + "%";
-    
-            randomPercentage = Math.floor(Math.random() * 100);
-            let leftPosition = (window.innerWidth - self.windowDiv.clientWidth) * (randomPercentage / 100);
-            self.windowDiv.style.left = leftPosition / window.innerWidth * 100 + "%";
-    
+            if(this.placeRandom){
+                let randomPercentage = Math.floor(Math.random() * 100) + 1;
+                let topPosition = (window.innerHeight - self.windowDiv.clientHeight) * (randomPercentage / 100);
+                self.windowDiv.style.top = (topPosition / window.innerHeight * 100) + "%";
+        
+                randomPercentage = Math.floor(Math.random() * 100);
+                let leftPosition = (window.innerWidth - self.windowDiv.clientWidth) * (randomPercentage / 100);
+                self.windowDiv.style.left = leftPosition / window.innerWidth * 100 + "%";
+            }else{
+                let topPosition = (window.innerHeight - self.windowDiv.clientHeight) * 0.5;
+                self.windowDiv.style.top = (topPosition / window.innerHeight * 100) + "%";
+                
+                let leftPosition = (window.innerWidth - self.windowDiv.clientWidth) * 0.5;
+                self.windowDiv.style.left = leftPosition / window.innerWidth * 100 + "%";
+            }
 
 
             //make window dragable
