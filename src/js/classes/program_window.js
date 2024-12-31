@@ -135,22 +135,22 @@ export class ProgramWindow{
             //add the created window onto the page
             document.getElementById("container").appendChild(self.windowDiv)
 
+            let topPosition = 0;
+            let leftPosition = 0;
+
             if(this.placeRandom){
-                let randomPercentage = Math.floor(Math.random() * 100) + 1;
-                let topPosition = (window.innerHeight - self.windowDiv.clientHeight) * (randomPercentage / 100);
-                self.windowDiv.style.top = (topPosition / window.innerHeight * 100) + "%";
-        
-                randomPercentage = Math.floor(Math.random() * 100);
-                let leftPosition = (window.innerWidth - self.windowDiv.clientWidth) * (randomPercentage / 100);
-                self.windowDiv.style.left = leftPosition / window.innerWidth * 100 + "%";
-            }else{
-                let topPosition = (window.innerHeight - self.windowDiv.clientHeight) * 0.5;
-                self.windowDiv.style.top = (topPosition / window.innerHeight * 100) + "%";
+                let randomTop = Math.floor(Math.random() * 100) + 1;
+                topPosition = (window.innerHeight - self.windowDiv.clientHeight) * (randomTop / 100);
                 
-                let leftPosition = (window.innerWidth - self.windowDiv.clientWidth) * 0.5;
-                self.windowDiv.style.left = leftPosition / window.innerWidth * 100 + "%";
+                let randomLeft = Math.floor(Math.random() * 100);
+                leftPosition = (window.innerWidth - self.windowDiv.clientWidth) * (randomLeft / 100);
+            }else{
+                topPosition = (window.innerHeight - self.windowDiv.clientHeight) * 0.5;
+                leftPosition = (window.innerWidth - self.windowDiv.clientWidth) * 0.5;
             }
 
+            self.windowDiv.style.top = (topPosition / window.innerHeight * 100) + "%";
+            self.windowDiv.style.left = (leftPosition / window.innerWidth * 100) + "%";
 
             //make window dragable
             self.dragElement(self.windowDiv,titleBar,self)

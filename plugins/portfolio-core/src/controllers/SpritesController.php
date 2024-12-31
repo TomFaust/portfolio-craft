@@ -32,8 +32,17 @@ Class SpritesController extends Controller{
                     $optionObject['startFunction'] = $spriteOption->startFunction->value;
                 }
 
+                
+                if($spriteOption->startVariable->one()){
+                    $optionObject['startVariable'] = $this->handleVariables($spriteOption->startVariable->one());
+                }
+
                 if($spriteOption->endFunction->value){
                     $optionObject['endFunction'] = $spriteOption->endFunction->value;
+                }
+   
+                if($spriteOption->endVariable->one()){
+                    $optionObject['endVariable'] = $this->handleVariables($spriteOption->endVariable->one());
                 }
 
                 $object[$spriteOption->slug . "-" . $spriteOption->id] = $optionObject;
@@ -46,4 +55,23 @@ Class SpritesController extends Controller{
         return $this->asJson($spritesObject);
     }
 
+    private function handleVariables($entry){
+
+        $value = null;
+
+        switch($entry->type->handle){
+            case 'dialogue':
+                $content = [];
+                foreach($entry->dialogue as $dialogue){
+                    $content[] = $dialogue['line'];
+                }
+                $value = $content;
+                break;
+            default:
+                break;
+        }
+
+        return $value;
+    }
+    
 }

@@ -1,24 +1,23 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>tom_faust</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="minimum-scale=1, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/public/img/windows.ico"/>
+  <head>
+    <title>tom_faust</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/public/img/windows.ico"/>
 
-    {{ craft.vite.script('src/js/main.js', false, {
-            defer: 'defer'
-    }) }}
+      {{ craft.vite.script('src/js/main.js', false, {
+              defer: 'defer'
+      }) }}
 
-</head>
+  </head>
 
-<body>
-    {% block content %}
-        
-    {% endblock %}
+  <body>
+      {% block content %}
+          
+      {% endblock %}
 
-    {% block foot %}
+      {% block foot %}
 
-    {% endblock %}
-</body>
+      {% endblock %}
+  </body>
 <html>

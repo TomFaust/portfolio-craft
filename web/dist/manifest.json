@@ -34,7 +34,7 @@
     "css": [
       "assets/main-20529f17.css"
     ],
-    "file": "assets/main-6550ff5c.js",
+    "file": "assets/main-6f50ba63.js",
     "imports": [
       "src/js/timer.js",
       "src/js/customization.js",
@@ -45,7 +45,7 @@
     "src": "src/js/main.js"
   },
   "src/js/sprites.js": {
-    "file": "assets/sprites-c0f8dfda.js",
+    "file": "assets/sprites-28519ce0.js",
     "isEntry": true,
     "src": "src/js/sprites.js"
   },
@@ -55,7 +55,7 @@
     "src": "src/js/timer.js"
   },
   "src/js/windows.js": {
-    "file": "assets/windows-c2316d36.js",
+    "file": "assets/windows-e3438679.js",
     "isEntry": true,
     "src": "src/js/windows.js"
   }

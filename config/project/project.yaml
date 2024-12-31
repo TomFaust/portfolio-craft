@@ -1,4 +1,4 @@
-dateModified: 1734377529
+dateModified: 1735660500
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
@@ -15,7 +15,9 @@ meta:
   __names__:
     0e2c6c12-f0c0-40d0-a364-c123f2425a77: 'Contact list' # Contact list
     01a69c9a-b952-4a89-9b5c-24ad86df8558: 'Menu option' # Menu option
+    01de65a0-ecca-4dad-89eb-353916157457: Dialogue # Dialogue
     1ef4c050-d814-47c6-9dbb-2449c83d9fa7: Files # Files
+    2a3e36d5-6f16-4eaf-ba52-e764021e471f: 'Start variable' # Start variable
     3afe07f1-ed58-464e-b819-32f74b4d7dd2: Welcome # Welcome
     5cbbc156-a371-4496-b3ac-59ef92544ad4: 'Content ID' # Content ID
     5d1b3eb3-1f31-4d23-a940-147a23d28e8c: 'Past work' # Past work
@@ -54,6 +56,7 @@ meta:
     ae9e8c04-b7c2-4426-981a-0dbe15621362: 'Sprite option' # Sprite option
     b2ffb493-b152-4dc2-b7d4-ef22f7c27bc5: Image # Image
     c533096a-5a5d-4e70-a0bc-98116828e93c: 'Link address' # Link address
+    cafcc255-7f85-4edd-98a0-605ba2624979: Dialogue # Dialogue
     cb332bee-298c-486d-b275-957dbfd14f7f: 'About me' # About me
     d4bc21ab-1729-4dcf-a03c-bae1b33ce69a: Body # Body
     d5994ae2-f141-4ad9-ae59-9262bbb245bc: 'Sprite options' # Sprite options
@@ -63,6 +66,7 @@ meta:
     ef806f12-f5a9-46be-a00f-2b6698c59daa: 'Minimum delay' # Minimum delay
     efee04a0-8339-4651-b2f8-cb41af9e4c23: Topic # Topic
     f0582ffa-fa9f-4cfe-a72d-3d26eba3a594: 'Social media' # Social media
+    fafd7983-faf1-4ea7-a463-bfe55b2b992e: 'End variable' # End variable
     fbd1dcfc-cba3-4ad4-b8a5-cd62a9db66e1: Sprites # Sprites
     fc18808b-0848-403e-9b71-3493b62b47c0: 'Contact information' # Contact information
 plugins:

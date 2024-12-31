@@ -3,22 +3,6 @@ import { Exception } from "sass";
 let me = document.getElementById('me');
 let speech = document.getElementById('speechBubble');
 
-let facts = [
-    "Double click/tap icons to open them, just like on a real pc",
-    "I am not a real person, just an image.",
-    "Press the right mouse button...for nothing. Why would i make the right mouse button do something special?",
-    "Hover your mouse over the start button for some fun features!",
-    "You can minimize tabs using the minimize button, try it!",
-    "Don't worry, this isn't actually a Windows 98 desktop. I'm just that good at making websites!",
-    "Feel free to look around, but try not to break anything. I live here!",
-    "No, i don't go away!",
-    "I have a bachelor's degree in Creative Media and Game Technologies.",
-    "If you ever need help finding something... i hope you get it.",
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGGGGGGGGHHHHHHH!!!!!!",
-    "The fog is coming...",
-    "Flesk"
-]
-
 const functionMap = {
   startSpeech: (variable) => startSpeech(variable),
   endSpeech: (variable) => endSpeech(variable)
@@ -83,7 +67,7 @@ async function iterateObjectWithDelay(obj) {
   }
 }
 
-async function startSpeech(){
+async function startSpeech(facts = []){
   let middle = document.getElementById('middle');
   speech.style.visibility = 'visible';
   middle.innerHTML = ""; 

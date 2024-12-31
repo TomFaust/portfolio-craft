@@ -32,7 +32,9 @@ export class History{
 
         this.interactibles.forEach(interactible => {
             interactible.addEventListener(action,(e)=>{
-                let newEntry = eval("interactible."+ attribute);
+
+                //since the attribute can be determined elsewhere via string, we are accessing it like so
+                let newEntry = attribute.split('.').reduce((obj, key) => obj[key], interactible);
 
                 if(this.history[this.historyPos] !== newEntry){
                     this.history = this.history.slice(0, this.historyPos + 1);
@@ -48,7 +50,7 @@ export class History{
 
             if(action === "dblclick"){
                 new DoubletapHandler(interactible, () =>{
-                    let newEntry = eval("interactible."+ attribute);
+                    let newEntry = attribute.split('.').reduce((obj, key) => obj[key], interactible);
                     
                     if(this.history[this.historyPos] !== newEntry){
                         this.history = this.history.slice(0, this.historyPos + 1);

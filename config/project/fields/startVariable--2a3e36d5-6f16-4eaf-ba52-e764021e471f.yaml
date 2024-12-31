@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: startVariable
+instructions: null
+name: 'Start variable'
+searchable: false
+settings:
+  createButtonLabel: 'New variable'
+  defaultIndexViewMode: cards
+  entryTypes:
+    - 01de65a0-ecca-4dad-89eb-353916157457 # Dialogue
+  includeTableView: false
+  maxEntries: 1
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
