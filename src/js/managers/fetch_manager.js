@@ -3,6 +3,15 @@ export class FetchManager {
     static style = null;
 
     static isCallOngoing(key) {
+        let style = FetchManager.style;
+
+        if(!style){
+            style = document.createElement("style");
+            FetchManager.style = style;
+            document.head.appendChild(style);
+        }
+        style.innerHTML = `* { cursor: progress !important; }`;
+        
         return FetchManager.ongoingCalls.has(key);
     }
 
