@@ -21,6 +21,7 @@ return GeneralConfig::create()
     // Prevent user enumeration attacks
     ->preventUserEnumeration()
     ->devMode(true)
+    ->enableGql(false)
     ->transformGifs(false)
     ->allowedFileExtensions(["png","jpg","cur","pdf","webp","gif"])
     // Set the @webroot alias so the clear-caches command knows where to find CP resources

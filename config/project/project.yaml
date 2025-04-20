@@ -1,4 +1,4 @@
-dateModified: 1735660500
+dateModified: 1744570688
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
@@ -90,7 +90,7 @@ system:
   edition: solo
   live: true
   name: portfolio-craft
-  schemaVersion: 5.5.0.0
+  schemaVersion: 5.6.0.2
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

@@ -8,12 +8,7 @@
     width:400px;
 }
 
-#oh_bees_window{
-    height:200px;
-    width:600px;
-}
-
-#woodland_war_window{
+#oh_bees_window, #woodland_war_window, #astral_decoder_window{
     height:200px;
     width:600px;
 }
@@ -62,12 +57,7 @@
             width:350px;
         }
         
-        #oh_bees_window{
-            height:100px;
-            width:250px;
-        }
-
-        #woodland_war_window{
+        #oh_bees_window, #woodland_war_window, #astral_decoder_window{
             height:100px;
             width:250px;
         }
@@ -116,16 +106,11 @@
             width:250px;
         }
         
-        #oh_bees_window{
+        #oh_bees_window, #woodland_war_window, #astral_decoder_window{
             height:150px;
             width:300px;
         }
 
-        #woodland_war_window{
-            height:150px;
-            width:300px;
-        }
-        
         #past_work_window{
             height:450px;
             width:350px;
