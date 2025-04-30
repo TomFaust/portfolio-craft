@@ -10,14 +10,12 @@
         <div class="gradient"></div>
     </div>
 
-    {% set entry = craft.entries.section('welcome').one() %}
-
     <div class="main">
         <div class="explore">
             <div class="exploreContent">
                 {{ "CONTENTS"|t }}
             </div>
-            {% for welcomeButton in entry.welcomeButtons %}
+            {% for welcomeButton in block.welcomeButtons %}
                 <div class="exploreButton pointer " id="welcome-{{ welcomeButton.id }}">
                     <div class="colorBox"></div>
                     {{ welcomeButton.text }}
@@ -25,10 +23,9 @@
             {% endfor %}
         </div>
         <div>
-            <h1>{{ entry.title }}</h1>
-            
-            {{ entry.body }}
-
+            <h1>{{ entryTitle }}</h1>
+        
+            {{ block.body }}
         </div>
     </div>
 

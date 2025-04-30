@@ -16,12 +16,12 @@
     "src": "node_modules/98.css/dist/ms_sans_serif_bold.woff2"
   },
   "src/js/customization.js": {
-    "file": "assets/customization-32740eb7.js",
+    "file": "assets/customization-00b079e9.js",
     "isEntry": true,
     "src": "src/js/customization.js"
   },
   "src/js/main.css": {
-    "file": "assets/main-13f94323.css",
+    "file": "assets/main-f32085e6.css",
     "src": "src/js/main.css"
   },
   "src/js/main.js": {
@@ -32,9 +32,9 @@
       "assets/ms_sans_serif_bold-5f3fbc57.woff2"
     ],
     "css": [
-      "assets/main-13f94323.css"
+      "assets/main-f32085e6.css"
     ],
-    "file": "assets/main-c39dabaf.js",
+    "file": "assets/main-12e9b828.js",
     "imports": [
       "src/js/timer.js",
       "src/js/customization.js",
@@ -55,7 +55,7 @@
     "src": "src/js/timer.js"
   },
   "src/js/windows.js": {
-    "file": "assets/windows-573e5e6c.js",
+    "file": "assets/windows-24a2e8df.js",
     "isEntry": true,
     "src": "src/js/windows.js"
   }

@@ -6,36 +6,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2024-12-11T21:00:20+00:00'
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            required: true
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: d3af4498-bad2-4477-a0aa-6bc9e020110a
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2024-12-11T21:01:48+00:00'
             elementCondition: null
             fieldUid: dfe1a1a4-9868-486f-bb56-0b187a82fde1 # Pdf file
@@ -71,13 +41,13 @@ fieldLayouts:
         uid: dd9ecc14-5129-4def-ba32-347f912eea5a
         userCondition: null
 handle: cv
-hasTitleField: true
+hasTitleField: false
 icon: address-card
 name: CV
 showSlugField: true
 showStatusField: true
-slugTranslationKeyFormat: ''
+slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
-titleTranslationKeyFormat: ''
+titleFormat: null
+titleTranslationKeyFormat: null
 titleTranslationMethod: site

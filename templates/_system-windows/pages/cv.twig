@@ -6,15 +6,11 @@
 
 {% block content %}
 
-  {% set entry = craft.entries.slug('cv').section('cv').one() %}
-
-  <object data="{% if entry.pdfFile.one() %} {{ entry.pdfFile.one().url }} {% endif %}" type="application/pdf" >
+  <object data="{% if block.pdfFile.one() %} {{ block.pdfFile.one().url }} {% endif %}" type="application/pdf" >
 
     <div id="altCV" class="sunken-panel">
       <span>
-
-        {{ entry.body }}
-
+        {{ block.body }}
       </span>
     </div>
 

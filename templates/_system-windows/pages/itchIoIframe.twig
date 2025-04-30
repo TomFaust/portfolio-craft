@@ -1,0 +1,13 @@
+{% set windowClasses = "itch_io_iframe_window" %}
+
+{% extends "_system-windows/layouts/" ~ layout %}
+
+{% block head %}
+    <img class="title-bar-icon" src="{{ titleIcon }}"> {{ snakeTitle }}
+{% endblock %}
+
+{% block content %}
+    <iframe class="itch_io_iframe" frameborder="0" src="{{ block.embedLink }}">
+        <a href="{{ block.pageLink }}">{{ block.credits }}</a>
+    </iframe>
+{% endblock %}

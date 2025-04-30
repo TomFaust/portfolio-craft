@@ -3,15 +3,6 @@ export class FetchManager {
     static style = null;
 
     static isCallOngoing(key) {
-        let style = FetchManager.style;
-
-        if(!style){
-            style = document.createElement("style");
-            FetchManager.style = style;
-            document.head.appendChild(style);
-        }
-        style.innerHTML = `* { cursor: progress !important; }`;
-        
         return FetchManager.ongoingCalls.has(key);
     }
 
@@ -24,11 +15,22 @@ export class FetchManager {
             document.head.appendChild(style);
         }
         style.innerHTML = `* { cursor: progress !important; }`;
-        FetchManager.ongoingCalls.set(key, true);
+
+        if(FetchManager.ongoingCalls.has(key)){
+            FetchManager.ongoingCalls.set(key, FetchManager.ongoingCalls.get(key) + 1);
+        }else{
+            FetchManager.ongoingCalls.set(key,1)
+        }
     }
 
     static endCall(key) {
-        FetchManager.style.innerHTML = "";
-        FetchManager.ongoingCalls.delete(key);
+        if(FetchManager.ongoingCalls.get(key)){
+            FetchManager.ongoingCalls.set(key, FetchManager.ongoingCalls.get(key) - 1);
+            
+            if(FetchManager.ongoingCalls.get(key) < 1){
+                FetchManager.ongoingCalls.delete(key)
+                FetchManager.style.innerHTML = ""
+            }
+        }
     }
 }

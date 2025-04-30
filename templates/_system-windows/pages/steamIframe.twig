@@ -1,12 +1,11 @@
+{% set windowClasses = "steam_iframe_window" %}
+
 {% extends "_system-windows/layouts/" ~ layout %}
 
 {% block head %}
     <img class="title-bar-icon" src="{{ titleIcon }}"> {{ snakeTitle }}
 {% endblock %}
 
-
 {% block content %}
-
-    <iframe src="https://store.steampowered.com/widget/2236880/"></iframe>
-
+    <iframe src="{{ block.embedLink }}"></iframe>
 {% endblock %}

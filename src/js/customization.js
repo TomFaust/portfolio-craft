@@ -39,11 +39,11 @@ async function switchCursors(cursor){
             // Set the custom cursor styles
             styleTag.textContent = `
                 body, *:enabled{
-                    cursor: url('${success["normal"]}'), auto !important;
+                    cursor: url('${success["normal"]}'), auto;
                 }
 
                 .pointer, *:enabled{
-                    cursor: url('${success["pointer"]}'), pointer !important;
+                    cursor: url('${success["pointer"]}'), pointer;
                 }
             `;
         })

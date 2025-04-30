@@ -47,6 +47,7 @@
                 {% set entries = craft.entries.section("aboutMe").relatedTo(topic).all() %}
                 {% for entry in entries %}
                     <div class="about-me-panel" data-subject="{{ entry.slug }}" {% if entry.backgroundImage.one() %} style="background-image:url({{ entry.backgroundImage.one().url }})" {% endif %}>
+                        <b>{{ entry.title }}</b><br>
                         {{ entry.body }}
                     </div>
                 {% endfor %}

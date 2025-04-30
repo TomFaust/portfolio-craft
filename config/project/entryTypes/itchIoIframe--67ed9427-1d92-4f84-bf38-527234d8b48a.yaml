@@ -1,30 +1,30 @@
-color: null
+color: red
 fieldLayouts:
-  2ae8bcf5-d6d3-402d-8aa2-c12ae17e88a9:
+  d8b69bb9-2f45-44e7-bc37-467e81554797:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-12-14T21:46:15+00:00'
+            dateAdded: '2025-04-30T18:13:40+00:00'
             elementCondition: null
-            fieldUid: 44bff4d4-3cea-4c2d-8f3c-5d95fb9625a5 # Welcome Buttons
+            fieldUid: f3644557-e865-4573-8e8a-61793b380cee # Embed Link
             handle: null
             includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 626f95f3-5540-4ee8-b558-882bab1436c9
+            uid: 729d2b62-5512-4173-8aa0-1891c19c05c8
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-12-14T16:16:44+00:00'
+            dateAdded: '2025-04-30T18:13:40+00:00'
             elementCondition: null
-            fieldUid: d4bc21ab-1729-4dcf-a03c-bae1b33ce69a # Body
+            fieldUid: e8d9427b-8120-406b-b228-5a9f725e2ece # Page Link
             handle: null
             includeInCards: false
             instructions: null
@@ -33,17 +33,33 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9a429db3-dedb-435d-8ee8-e7849ce0e654
+            uid: 77113a37-3e0b-4898-bb5c-e6c7d50e73b0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-30T18:13:40+00:00'
+            elementCondition: null
+            fieldUid: 72877b5d-6aa2-42a0-b6d5-5b9215cd8f82 # Credits
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 04acaa1a-4b9f-4b0f-b304-ae9a331bc72f
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: a8a6c5c0-a81c-4501-94c4-4dc63297b58e
+        uid: 4f7bd039-7f56-47c2-bc5a-35b858382920
         userCondition: null
-handle: welcome
+handle: itchIoIframe
 hasTitleField: false
-icon: face-grin
-name: Welcome
+icon: window-frame
+name: 'Itch.io Iframe'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

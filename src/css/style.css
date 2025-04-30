@@ -301,7 +301,7 @@ div[role=tabpanel]{
     margin-right:5px;
 }
 
-#oh_bees_iframe, #woodland_war_iframe, #astral_decoder_iframe{
+.itch_io_iframe{
     width:100%;
     height:100%;
 }
@@ -456,7 +456,7 @@ div[role=tabpanel]{
     }
 }
 
-#about_me_window{
+#about-me_window{
 
     hr{
         margin: 0px;
@@ -523,21 +523,12 @@ div[role=tabpanel]{
 
 }
 
-
-
-#my_properties_window{ 
-    .windowArea{
-        display:grid;
-        grid-template-rows: auto 1fr;
-    }
-}
-
-#social_media_window .windowArea pre{
+#social-media_window .windowArea pre{
     height: 100%;
     position: relative;
 }
 
-#social_media_window .windowArea pre img{
+#social-media_window .windowArea pre img{
     width:100%;
     position: absolute;
     left:0;
@@ -593,7 +584,7 @@ div[role=tabpanel]{
 }
 
 
-#past_work_window .windowArea .pre {
+#past-work_window .windowArea .pre {
     height: 100%;
     position: relative;
 
@@ -604,7 +595,7 @@ div[role=tabpanel]{
     padding: 12px 8px;
 }
 
-#i_wont_forget_hue_window iframe{
+.steam_iframe_window iframe{
     height:100%;
     width:100%;
     background-color: #282e39;
@@ -1075,7 +1066,7 @@ ul li:hover>ul {
             grid-template-columns: 130px auto;
         }
 
-        #about_me_window{
+        #about-me_window{
             .content{
                 grid-template-columns: 150px max-content auto;
             }

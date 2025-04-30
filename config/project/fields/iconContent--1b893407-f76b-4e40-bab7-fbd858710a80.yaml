@@ -1,0 +1,60 @@
+columnSuffix: null
+handle: iconContent
+instructions: null
+name: 'Icon Content'
+searchable: false
+settings:
+  createButtonLabel: 'Pick content'
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 67ed9427-1d92-4f84-bf38-527234d8b48a # Itch.io Iframe
+    -
+      __assoc__:
+        -
+          - uid
+          - 11f7aaad-caf4-471a-97c9-9b70a976f8ac # CV
+    -
+      __assoc__:
+        -
+          - uid
+          - 873c9037-bea5-4a69-b297-71209737ff8b # Steam Iframe
+    -
+      __assoc__:
+        -
+          - uid
+          - 3afe07f1-ed58-464e-b819-32f74b4d7dd2 # Welcome
+    -
+      __assoc__:
+        -
+          - uid
+          - ffe7ef54-25c1-41a4-8be6-38e6393537ad # About me
+    -
+      __assoc__:
+        -
+          - uid
+          - 75f5ad93-2fec-480c-ab75-b48905e27ea9 # Contact
+    -
+      __assoc__:
+        -
+          - uid
+          - 00485136-e5e9-4fe6-ab38-4d3e114bdb40 # Past Work Collection
+    -
+      __assoc__:
+        -
+          - uid
+          - bf7bf822-bf2c-4f1c-8f97-9bf7277f31bc # Social Media Collection
+  includeTableView: false
+  maxEntries: 1
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

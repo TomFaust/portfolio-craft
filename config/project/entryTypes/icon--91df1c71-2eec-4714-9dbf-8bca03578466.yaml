@@ -68,38 +68,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-12-11T20:52:01+00:00'
-            elementCondition: null
-            fieldUid: a4b8d18b-6cae-42a6-99ec-32a38eabc276
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: cde16ccf-75ad-4fbf-a701-ec490a3a533e
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            dateAdded: '2024-12-11T20:52:01+00:00'
-            elementCondition: null
-            fieldUid: 1e5b7614-70b5-45d0-9b87-86ef0155dd64
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a34a2d59-616e-42ae-a15a-f7f84ecdd114
-            userCondition: null
-            warning: null
-            width: 25
-          -
             dateAdded: '2024-12-08T16:25:08+00:00'
             elementCondition: null
             fieldUid: 643e2a1b-c91c-4e6a-9202-c9d35696ec1b # Icon
@@ -132,9 +100,9 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-12-08T16:26:18+00:00'
+            dateAdded: '2025-04-30T18:15:23+00:00'
             elementCondition: null
-            fieldUid: 5cbbc156-a371-4496-b3ac-59ef92544ad4 # Content ID
+            fieldUid: 1b893407-f76b-4e40-bab7-fbd858710a80 # Icon Content
             handle: null
             includeInCards: false
             instructions: null
@@ -143,7 +111,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5183f172-cc08-4984-ba5d-0d4ff93f9618
+            uid: 758f2447-536e-4231-8e30-7613662cfeaf
             userCondition: null
             warning: null
             width: 100
@@ -172,8 +140,8 @@ icon: calculator
 name: Icon
 showSlugField: true
 showStatusField: true
-slugTranslationKeyFormat: ''
+slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
-titleTranslationKeyFormat: ''
+titleFormat: null
+titleTranslationKeyFormat: null
 titleTranslationMethod: site

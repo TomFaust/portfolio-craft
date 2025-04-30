@@ -22,19 +22,28 @@ Class PopupController extends Controller{
 
         $snakeTitle = $this->sanitizeString($entry->title);
 
-        $html = Craft::$app->view->renderTemplate('_system-windows/pages/' . $entry->contentId, [
-            'entryTitle' => $entry->title,
-            'snakeTitle' => $snakeTitle,
-            'contentId' => $entry->contentId,
-            'layout' => $entry->windowType,
-            'titleIcon' => $entry->windowIcon->one()->getUrl()
-        ]);
+        $block = $entry->iconContent->one();
 
-        return $this->asJson([
-            'title' => $snakeTitle,
-            'content' => $html,
-            'icon' => $entry->windowIcon->one()->getUrl()
-        ]);
+        if($block){
+
+            $html = Craft::$app->view->renderTemplate('_system-windows/pages/' . $block->type, [
+                'entryTitle' => $entry->title,
+                'snakeTitle' => $snakeTitle,
+                'contentId' => $block->type,
+                'layout' => $entry->windowType,
+                'titleIcon' => $entry->windowIcon->one()->getUrl(),
+                'block' => $block
+            ]);
+
+            return $this->asJson([
+                'title' => $snakeTitle,
+                'content' => $html,
+                'icon' => $entry->windowIcon->one()->getUrl()
+            ]);
+
+        }
+
+        return null;
     }
 
     private function sanitizeString($input) {

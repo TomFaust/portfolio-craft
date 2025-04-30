@@ -1,19 +1,19 @@
-#social_media_window{
+#social-media_window{
     height:500px;
     width:800px;
 }
 
-#i_wont_forget_hue_window{
+.steam_iframe_window{
     height:250px;
     width:400px;
 }
 
-#oh_bees_window, #woodland_war_window, #astral_decoder_window{
+.itch_io_iframe_window{
     height:200px;
     width:600px;
 }
 
-#past_work_window{
+#past-work_window{
     height:500px;
     width:800px;
 }
@@ -23,17 +23,12 @@
    width: 900px;
 }
 
-#my_properties_window{
-    height:500px;
-    width:500px;
-}
-
 #contact_window{
     height:450px;
     width:550px;
 }
 
-#about_me_window{
+#about-me_window{
     height:450px;
     width:550px;
 }
