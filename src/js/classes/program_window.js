@@ -157,17 +157,17 @@ export class ProgramWindow{
 
             //window specific functions
             switch(target){
-                case "social_media":
+                case "social-media":
                     new BrowserSwitch(self.windowDiv);
                     new History(self.windowDiv,".address_select","value",".address_select",".browser_screen","change");
                     break;
-                case "about_me":
+                case "about-me":
                     new Tablist(self.windowDiv,'li[role="tab"]','ul.tree-view','aria-selected')
                     new Tablist(self.windowDiv,'ul.tree-view li a','.main div','aria-selected')
 
                     new History(self.windowDiv,"ul.tree-view li a","dataset.panel","",".about-me-panel","click");
                     break;
-                case "past_work":
+                case "past-work":
                     new History(self.windowDiv,".clickableIcon","dataset.panel",".address_select",".folderPanel","dblclick");
                     new FileExplorer(self.windowDiv);
                     break;
