@@ -1,0 +1,33 @@
+columnSuffix: null
+handle: titleDisplay
+instructions: null
+name: 'Title Display'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Entry Title'
+        -
+          - value
+          - entryTitle
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Windows
+        -
+          - value
+          - windows
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -1,4 +1,4 @@
-dateModified: 1746045939
+dateModified: 1746217377
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
@@ -67,6 +67,7 @@ meta:
     d5994ae2-f141-4ad9-ae59-9262bbb245bc: 'Sprite options' # Sprite options
     da878ded-8b92-4d04-bf6e-78fe822b5b8e: 'Can be duplicated?' # Can be duplicated?
     dfe1a1a4-9868-486f-bb56-0b187a82fde1: 'Pdf file' # Pdf file
+    e08b9679-4d74-4da9-a0e3-f12a091221b9: 'Title Display' # Title Display
     e8d9427b-8120-406b-b228-5a9f725e2ece: 'Page Link' # Page Link
     ecbaba17-c1a7-4e70-8a37-06a312e4de04: portfolio-craft # portfolio-craft
     ef806f12-f5a9-46be-a00f-2b6698c59daa: 'Minimum delay' # Minimum delay

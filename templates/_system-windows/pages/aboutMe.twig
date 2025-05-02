@@ -46,8 +46,15 @@
             {% for topic in topics %}
                 {% set entries = craft.entries.section("aboutMe").relatedTo(topic).all() %}
                 {% for entry in entries %}
-                    <div class="about-me-panel" data-subject="{{ entry.slug }}" {% if entry.backgroundImage.one() %} style="background-image:url({{ entry.backgroundImage.one().url }})" {% endif %}>
-                        <b>{{ entry.title }}</b><br>
+                    <div class="about-me-panel" data-subject="{{ entry.slug }}" style="{% if entry.backgroundImage.one() %}background-image:url({{ entry.backgroundImage.one().url }});{% endif %} {% if entry.titleDisplay == 'windows' %} padding-top: 100px; {%endif%}" >
+                        {% if entry.titleDisplay == "entryTitle" %}                        
+                            <b>{{ entry.title }}</b><br>
+                        {% elseif entry.titleDisplay == "windows" %}
+                                <div class="header">
+                                    <img src="/public/img/logo.png">
+                                    <div class="gradient"></div>
+                                </div>
+                        {% endif %}
                         {{ entry.body }}
                     </div>
                 {% endfor %}

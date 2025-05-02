@@ -163,7 +163,7 @@ export class ProgramWindow{
                     break;
                 case "about-me":
                     new Tablist(self.windowDiv,'li[role="tab"]','ul.tree-view','aria-selected')
-                    new Tablist(self.windowDiv,'ul.tree-view li a','.main div','aria-selected')
+                    new Tablist(self.windowDiv,'ul.tree-view li a','.main > div','aria-selected')
 
                     new History(self.windowDiv,"ul.tree-view li a","dataset.panel","",".about-me-panel","click");
                     break;

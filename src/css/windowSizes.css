@@ -42,22 +42,22 @@
 
     @media only screen and (orientation:landscape){
 
-        #social_media_window{
+        #social-media_window{
             height:350px;
             width:575px;
         }
         
-        #i_wont_forget_hue_window{
+        .steam_iframe_window{
             height:220px;
             width:350px;
         }
         
-        #oh_bees_window, #woodland_war_window, #astral_decoder_window{
-            height:100px;
+        .itch_io_iframe_window{
+            height:200px;
             width:250px;
         }
         
-        #past_work_window{
+        #past-work_window{
             height:300px;
             width:575px;
         }
@@ -67,17 +67,13 @@
            width: 450px;
         }
         
-        #my_properties_window{
-            height:300px;
-            width:530px;
-        }
 
         #contact_window{
             height:300px;
             width:550px;
         }
 
-        #about_me_window{
+        #about-me_window{
             height:300px;
             width:550px;
         }
@@ -91,22 +87,22 @@
 
     @media only screen and (orientation:portrait){
 
-        #social_media_window{
+        #social-media_window{
             height:450px;
             width:350px;
         }
         
-        #i_wont_forget_hue_window{
+        .steam_iframe_window{
             height:150px;
             width:250px;
         }
         
-        #oh_bees_window, #woodland_war_window, #astral_decoder_window{
-            height:150px;
-            width:300px;
+        .itch_io_iframe_window{
+            height: 150px;
+            width: 200px;
         }
 
-        #past_work_window{
+        #past-work_window{
             height:450px;
             width:350px;
         }
@@ -115,18 +111,13 @@
            height: 200px;
            width: 330px;
         }
-        
-        #my_properties_window{
-            height:500px;
-            width:350px;
-        }
 
         #contact_window{
             height:400px;
             width:350px;
         }
 
-        #about_me_window{
+        #about-me_window{
             height:400px;
             width:350px;
         }

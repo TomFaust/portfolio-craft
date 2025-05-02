@@ -20,7 +20,7 @@
     font-size:20px !important;
 
     #top{
-        height: 7px;
+        height: 8px;
         width:100%;
         top:0;
         background-image: url("/public/img/speechbubble/top.png");
@@ -53,4 +53,29 @@
         -moz-background-size: cover;
         -webkit-background-size: cover;
     }
+}
+
+
+@media only screen and ((max-width: 600px) or (max-height:600px))    {
+
+    #me{
+        width:112.5px;
+    }
+
+    #speechBubble{
+        right:70px;
+        bottom:100px;
+        width:187.5px;
+
+        font-size:15px !important;
+    }
+
+    #top{
+        height: 6px;
+    }
+
+    #bottom{
+        height: 15px;
+    }
+    
 }

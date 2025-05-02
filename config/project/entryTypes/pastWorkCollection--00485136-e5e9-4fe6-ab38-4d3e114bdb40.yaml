@@ -4,42 +4,11 @@ fieldLayouts:
     tabs:
       -
         elementCondition: null
-        elements:
-          -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2025-04-30T20:36:37+00:00'
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            required: true
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: eadab6d2-8cb7-409b-b7a8-f117d855096f
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: a7e6084b-9f47-406b-b400-dc9b1db348e2
         userCondition: null
 handle: pastWorkCollection
-hasTitleField: true
+hasTitleField: false
 icon: computer-classic
 name: 'Past Work Collection'
 showSlugField: true
