@@ -1053,6 +1053,12 @@ ul li:hover>ul {
             width:100px;
         }
 
+        .fileInfoPanel{
+            p{
+                font-size: 12pt !important;
+            }
+        }
+
         #plane_flight{
             right:100px;
             width:1000px;
