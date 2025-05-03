@@ -29,8 +29,13 @@ export class FetchManager {
             
             if(FetchManager.ongoingCalls.get(key) < 1){
                 FetchManager.ongoingCalls.delete(key)
+                
+            }
+
+            if(!FetchManager.ongoingCalls.size){
                 FetchManager.style.innerHTML = ""
             }
+
         }
     }
 }

@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - f0582ffa-fa9f-4cfe-a72d-3d26eba3a594 # Social media
+  -
+    uid: f0582ffa-fa9f-4cfe-a72d-3d26eba3a594 # Social media
 handle: socialMedia
 maxAuthors: 1
 name: 'Social media'
@@ -29,4 +30,7 @@ siteSettings:
     hasUrls: false
     template: null
     uriFormat: null
-type: channel
+structure:
+  maxLevels: 1
+  uid: bfc7fef8-13c4-4dcb-9fd1-f52a7e46a91f
+type: structure

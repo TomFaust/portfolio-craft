@@ -1,4 +1,4 @@
-dateModified: 1746217377
+dateModified: 1746283156
 email:
   fromEmail: tom.faust@hotmail.com
   fromName: portfolio-craft
@@ -91,6 +91,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
   vite:
     edition: standard
     enabled: true
