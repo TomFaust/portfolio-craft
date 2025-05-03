@@ -6,14 +6,24 @@
 
 {% block content %}
 
-  <object data="{% if block.pdfFile.one() %} {{ block.pdfFile.one().url }} {% endif %}" type="application/pdf" >
+  {% if block.pdfFile.one() %}
 
+    <object data="{% if block.pdfFile.one() %} {{ block.pdfFile.one().url }} {% endif %}" type="application/pdf" >
+
+      <div id="altCV" class="sunken-panel">
+        <span>
+          {{ block.body }}
+        </span>
+      </div>
+
+    </object>
+
+  {% else %}
     <div id="altCV" class="sunken-panel">
       <span>
         {{ block.body }}
       </span>
     </div>
-
-  </object>
+  {% endif %}
 
 {% endblock %}
