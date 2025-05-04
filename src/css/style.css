@@ -1,13 +1,10 @@
 body, html{
-    background-color:#008080;
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
     padding:0;
     margin:0;
     height:100vh;
     width:100vw;
     overflow:hidden;
+    background-color: silver;
 }   
 
 a:link {
@@ -37,6 +34,11 @@ a:active {
     top:0;
     left:0;
     position:absolute;
+
+    background-color:#008080;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hidden{

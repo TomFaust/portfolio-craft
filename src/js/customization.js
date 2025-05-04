@@ -59,28 +59,30 @@ async function switchCursors(cursor){
 document.getElementById('file').addEventListener('change', (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
+    const container = document.getElementById("container");
+
     reader.onloadend = () => {
       // convert file to base64 String
       const base64String = reader.result.replace('data:', '').replace(/^.+,/, '');
       // store file
       localStorage.setItem('wallpaper', base64String);
       // display image
-      document.body.style.backgroundImage = `url(data:image/png;base64,${base64String})`;
+      container.style.backgroundImage = `url(data:image/png;base64,${base64String})`;
     };
     reader.readAsDataURL(file);
   });
 
   if(localStorage.hasOwnProperty("wallpaper")){
-    document.body.style.backgroundImage = `url(data:image/png;base64,${localStorage.getItem("wallpaper")})`
+    container.style.backgroundImage = `url(data:image/png;base64,${localStorage.getItem("wallpaper")})`
   }
 
   document.getElementById("openImgUpload").addEventListener("click",()=>{
-      document.getElementById('file').click()
+    document.getElementById('file').click()
   })
 
   document.getElementById("removeBackground").addEventListener("click",()=>{
-      document.body.style.backgroundImage = ""
-      localStorage.removeItem('wallpaper')
+    container.style.backgroundImage = ""
+    localStorage.removeItem('wallpaper')
   })
 
 

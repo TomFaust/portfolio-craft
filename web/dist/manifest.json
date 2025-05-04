@@ -16,12 +16,12 @@
     "src": "node_modules/98.css/dist/ms_sans_serif_bold.woff2"
   },
   "src/js/customization.js": {
-    "file": "assets/customization-00b079e9.js",
+    "file": "assets/customization-dde32bba.js",
     "isEntry": true,
     "src": "src/js/customization.js"
   },
   "src/js/main.css": {
-    "file": "assets/main-269509de.css",
+    "file": "assets/main-74a4ed9c.css",
     "src": "src/js/main.css"
   },
   "src/js/main.js": {
@@ -32,9 +32,9 @@
       "assets/ms_sans_serif_bold-5f3fbc57.woff2"
     ],
     "css": [
-      "assets/main-269509de.css"
+      "assets/main-74a4ed9c.css"
     ],
-    "file": "assets/main-b50bbdf4.js",
+    "file": "assets/main-754de0c5.js",
     "imports": [
       "src/js/timer.js",
       "src/js/customization.js",
