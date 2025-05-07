@@ -545,12 +545,7 @@ div[role=tabpanel]{
 
 }
 
-#social-media_window .windowArea pre{
-    height: 100%;
-    position: relative;
-}
-
-#social-media_window .windowArea pre img{
+#social-media_window .windowArea .pre img{
     width:100%;
     position: absolute;
     left:0;
@@ -606,7 +601,7 @@ div[role=tabpanel]{
 }
 
 
-#past-work_window .windowArea .pre {
+#social-media_window .windowArea .pre, #past-work_window .windowArea .pre {
     height: 100%;
     position: relative;
 
