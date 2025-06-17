@@ -1,36 +1,6 @@
-#social-media_window{
+#past-work_window,#social-media_window{
     height:500px;
     width:800px;
-}
-
-.steam_iframe_window{
-    height:250px;
-    width:400px;
-}
-
-.itch_io_iframe_window{
-    height:200px;
-    width:600px;
-}
-
-#past-work_window{
-    height:500px;
-    width:800px;
-}
-
-#cv_window{
-   height: 600px;
-   width: 900px;
-}
-
-#contact_window{
-    height:450px;
-    width:550px;
-}
-
-#about-me_window{
-    height:450px;
-    width:550px;
 }
 
 #welcome_window{
@@ -38,95 +8,43 @@
     width:500px;
 }
 
+#about-me_window,#contact_window{
+    height:450px;
+    width:550px;
+}
+
+#cv_window{
+    height: 600px;
+    width: 900px;
+}
+
 @media only screen and ((max-width: 600px) or (max-height:600px))    {
 
     @media only screen and (orientation:landscape){
 
-        #social-media_window{
-            height:350px;
-            width:575px;
-        }
-        
-        .steam_iframe_window{
-            height:220px;
-            width:350px;
-        }
-        
-        .itch_io_iframe_window{
-            height:200px;
-            width:250px;
-        }
-        
-        #past-work_window{
-            height:300px;
-            width:575px;
-        }
-        
-        #cv_window{
-           height: 300px;
-           width: 450px;
-        }
-        
-
-        #contact_window{
-            height:300px;
-            width:550px;
-        }
-
-        #about-me_window{
-            height:300px;
-            width:550px;
-        }
-
-        #welcome_window{
+        #cv_window,#welcome_window{
             height: 300px;
             width: 450px;
-        }
+         }
 
+        #contact_window,#about-me_window,#social-media_window,#past-work_window{
+            height:300px;
+            width:550px;
+        }
     }
 
     @media only screen and (orientation:portrait){
-
-        #social-media_window{
-            height:450px;
-            width:350px;
-        }
-        
-        .steam_iframe_window{
-            height:150px;
-            width:250px;
-        }
-        
-        .itch_io_iframe_window{
-            height: 150px;
-            width: 200px;
-        }
-
-        #past-work_window{
-            height:450px;
-            width:350px;
-        }
-        
+  
         #cv_window{
            height: 200px;
-           width: 330px;
+           width: 350px;
         }
 
-        #contact_window{
-            height:400px;
-            width:350px;
-        }
-
-        #about-me_window{
-            height:400px;
-            width:350px;
-        }
-
-        #welcome_window{
+        #welcome_window, #about-me_window,#contact_window,#social-media_window,#past-work_window{
             height:400px;
             width:350px;
         }
 
     }
-
+    
 }
