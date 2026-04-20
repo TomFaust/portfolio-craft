@@ -478,7 +478,6 @@ div[role=tabpanel]{
             position: relative;
             display: flex;
             flex-direction: column;
-            overflow: scroll;
 
             hr{
                 width:100%;
@@ -488,7 +487,7 @@ div[role=tabpanel]{
                 margin-top: 0;
             }
 
-            hr:nth-child(3){
+            hr:nth-child(4){
                 margin-bottom: 0;
             }
 
@@ -1119,6 +1118,21 @@ ul li:hover>ul {
 }
 
 @media only screen and ((max-width: 600px) or (max-height:600px)){
+
+    #paint_window{
+        #draw-area{
+            #tools{
+                overflow-y: scroll;
+                overflow-x: hidden;
+
+                .status-container{
+                    .status-bar-field{
+                        display: none;
+                    }
+                } 
+            }
+        }
+    }
 
     #speechBubble{
         right: 50px;
