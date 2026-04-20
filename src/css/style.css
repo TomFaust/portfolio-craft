@@ -492,7 +492,6 @@ div[role=tabpanel]{
             }
 
             #tool-grid{
-                flex:1;
                 display: grid;
                 grid-template-columns: repeat(2, max-content); 
                 grid-template-rows: repeat(9, 25px);
