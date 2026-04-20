@@ -1,0 +1,97 @@
+{% extends "_system-windows/layouts/" ~ layout %}
+
+{% block head %}
+    <img class="title-bar-icon" src="{{ titleIcon }}"> {{ snakeTitle }}
+{% endblock %}
+
+{% block content %}
+
+    <div id="draw-area">
+        <div id="tools">
+            <hr>
+            <div id="tool-grid">
+                {%set tools = [
+                    "star",
+                    "square_select",
+                    "eraser",
+                    "bucket",
+                    "line",
+                    "wave",
+                    "dropper",
+                    "magnify",
+                    "pencil",
+                    "brush",
+                    "marker",
+                    "text",
+                    "line",
+                    "wave",
+                    "square",
+                    "shape",
+                    "oval",
+                    "rounded"
+                ] %}
+
+                {% for tool in tools %}
+                    <div class="tool"><img src="/public/img/paint/{{tool}}.png"></div>
+                {% endfor %}
+            </div>
+
+            <div class="status-container">
+                <div class="status-bar-field"></div>
+            </div>
+            <hr>
+        </div>
+
+        <div id="canvas-area">
+            <div id="canvas-clamp">
+                <canvas></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div id="color-options">
+        
+        <div id="selected-colors">
+            <div id="color1"></div>
+            <div id="color2"></div>
+        </div>
+        
+        {% set colors = [
+            "fff",
+            "000000",
+            "87888f",
+            "c0c7c8",
+            "a80057",
+            "ff0000",
+            "a8a857",
+            "fdfd00",
+            "00a857",
+            "00ff00",
+            "57a8a8",
+            "00ffff",
+            "0000a8",
+            "0000ff",
+            "a857a8",
+            "ff00ff",
+            "979772",
+            "ffff7d",
+            "2b5454",
+            "00ff7e",
+            "0080ff",
+            "7dffff",
+            "2950a8",
+            "7d7dff",
+            "4900ff",
+            "fa007e",
+            "a85257",
+            "ff8051",
+        ] %}
+
+        <div id="colors">
+            {% for color in colors %}
+                <div class="color" style="background-color: #{{color}};"></div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

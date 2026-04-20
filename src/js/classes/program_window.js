@@ -6,6 +6,7 @@ import { InteractiveTable } from "./interactive_table.js";
 import { Search } from "./search.js";
 import { WelcomeFeatures } from "./welcome_features.js";
 import { FetchManager } from "../managers/fetch_manager.js";
+import { Paint } from "./paint.js"
 
 export class ProgramWindow{
 
@@ -175,6 +176,9 @@ export class ProgramWindow{
                     new InteractiveTable(self.windowDiv)
                     new Tablist(self.windowDiv,'li.contantGroup','div.contacts')
                     new Search(['social','direct'],{ valueNames: ['name','link','quick']},"#searchContacts")
+                    break;
+                case "paint":
+                    new Paint(self.windowDiv);
                     break;
                 case "welcome": 
                     new WelcomeFeatures()

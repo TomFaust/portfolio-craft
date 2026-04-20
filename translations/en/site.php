@@ -15,7 +15,9 @@ return [
     "<u>G</u>o" => "<u>G</u>o",
     "<u>F</u>avorites" => "<u>F</u>avorites",
     "<u>H</u>elp" => "<u>H</u>elp",
-
+    "<u>I</u>mage" => "<u>I</u>mage",
+    "<u>C</u>olors" => "<u>C</u>olors",
+    
     "New" => "New",
     "Properties" => "Properties",
     "Delete" => "Delete",

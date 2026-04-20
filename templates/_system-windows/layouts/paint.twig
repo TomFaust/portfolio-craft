@@ -1,0 +1,37 @@
+<div class="window displayWindow {% if windowClasses is defined %}{{ windowClasses }}{% endif %}">
+    <div class="title-bar">
+        <div class="title-bar-text">
+            {% block head %}
+                
+            {% endblock %}
+        </div>
+        <div class="title-bar-controls">
+            <button class="controls-minimize pointer" aria-label="Minimize">
+            </button>
+            <button class="controls-maximize pointer" aria-label="Maximize">
+            </button>
+            <button class="controls-close pointer" aria-label="Close">
+            </button>
+        </div>
+    </div>
+        <div class="window-options">
+        <div class="options">
+            <div class="item ">{{ "<u>F</u>ile"|t|raw }}</div>
+            <div class="item ">{{ "<u>E</u>dit"|t|raw }}</div>
+            <div class="item ">{{ "<u>V</u>iew"|t|raw }}</div>
+            <div class="item ">{{ "<u>I</u>mage"|t|raw }}</div>
+            <div class="item ">{{ "<u>C</u>olors"|t|raw }}</div>
+            <div class="item ">{{ "<u>H</u>elp"|t|raw }}</div>
+        </div>
+    </div>
+    <div class="windowArea">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <div class="status-bar">
+        <p class="status-bar-field">For Help, use Google. I don't have all the asnwers.</p>
+        <p class="status-bar-field"></p>
+        <span class="status-bar-field"> </span>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+color: violet
+fieldLayouts:
+  f440045e-0997-4104-9875-2716c3042851:
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: f5cc1612-096a-40e5-bcf8-22c5bbb8a3df
+        userCondition: null
+handle: paint
+hasTitleField: false
+icon: palette
+name: Paint
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

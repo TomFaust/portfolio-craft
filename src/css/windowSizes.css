@@ -1,4 +1,4 @@
-#past-work_window,#social-media_window{
+#past-work_window,#social-media_window,#paint_window{
     height:500px;
     width:800px;
 }
@@ -27,7 +27,7 @@
             width: 450px;
          }
 
-        #contact_window,#about-me_window,#social-media_window,#past-work_window{
+        #contact_window,#about-me_window,#social-media_window,#past-work_window,#paint_window{
             height:300px;
             width:550px;
         }
@@ -40,7 +40,7 @@
            width: 350px;
         }
 
-        #welcome_window, #about-me_window,#contact_window,#social-media_window,#past-work_window{
+        #welcome_window, #about-me_window,#contact_window,#social-media_window,#past-work_window,#paint_window{
             height:400px;
             width:350px;
         }

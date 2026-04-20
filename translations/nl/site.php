@@ -15,6 +15,8 @@ return [
     "<u>G</u>o" => "<u>G</u>a",
     "<u>F</u>avorites" => "<u>F</u>avorieten",
     "<u>H</u>elp" => "<u>H</u>elp",
+    "<u>I</u>mage" => "<u>A</u>febeelding",
+    "<u>C</u>olors" => "<u>K</u>leuren",
 
     "New" => "Nieuws",
     "Properties" => "Eigenschappen",

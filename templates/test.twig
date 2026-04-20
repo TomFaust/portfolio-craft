@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Canvas Drawing</title>
+    <style>
+        #canvasContainer {
+            width: 100%; /* Responsive width */
+            height: 400px; /* Can be dynamically changed via JS or CSS */
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        canvas {
+            display: block; /* Ensure canvas is block-level */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="canvasContainer">
+        <canvas id="myCanvas"></canvas>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const context = canvas.getContext('2d');
+        const canvasContainer = document.getElementById('canvasContainer');
+
+        // Drawing data array to store user input
+        let drawingData = [];
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+
+        // Function to resize the canvas based on the container size
+        function resizeCanvas() {
+            const width = canvasContainer.clientWidth;
+            const height = canvasContainer.clientHeight;
+
+            // Set the canvas size to match the container size
+            canvas.width = width;
+            canvas.height = height;
+
+            // Redraw the drawings after resizing
+            redrawCanvas();
+        }
+
+        // Function to handle user drawing
+        function startDrawing(e) {
+            isDrawing = true;
+            [lastX, lastY] = getMousePosition(e);
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            const [x, y] = getMousePosition(e);
+
+            // Capture drawing data (startX, startY, endX, endY)
+            drawingData.push({ type: 'line', startX: lastX, startY: lastY, endX: x, endY: y, color: 'black' });
+
+            // Draw on the canvas
+            context.beginPath();
+            context.moveTo(lastX, lastY);
+            context.lineTo(x, y);
+            context.stroke();
+
+            lastX = x;
+            lastY = y;
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+        }
+
+        function getMousePosition(e) {
+            const rect = canvas.getBoundingClientRect();
+            return [e.clientX - rect.left, e.clientY - rect.top];
+        }
+
+        // Function to redraw the canvas after resizing
+        function redrawCanvas() {
+            context.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+
+            // Redraw all drawing data based on new canvas size
+            drawingData.forEach(item => {
+                if (item.type === 'line') {
+                    // Scale the start and end points based on the new canvas size
+                    const scaleX = canvas.width / canvasContainer.clientWidth;
+                    const scaleY = canvas.height / canvasContainer.clientHeight;
+                    const startX = item.startX * scaleX;
+                    const startY = item.startY * scaleY;
+                    const endX = item.endX * scaleX;
+                    const endY = item.endY * scaleY;
+
+                    context.beginPath();
+                    context.moveTo(startX, startY);
+                    context.lineTo(endX, endY);
+                    context.strokeStyle = item.color;
+                    context.stroke();
+                }
+            });
+        }
+
+        // Event listeners for drawing
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+
+        // Resize the canvas when the container div is resized
+        const resizeObserver = new ResizeObserver(() => {
+            resizeCanvas();
+        });
+
+        resizeObserver.observe(canvasContainer); // Observe the container div for changes
+
+        // Initial setup
+        resizeCanvas(); // Adjust size based on the parent div
+    </script>
+
+</body>
+</html>

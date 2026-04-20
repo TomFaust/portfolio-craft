@@ -47,6 +47,11 @@ settings:
         -
           - uid
           - bf7bf822-bf2c-4f1c-8f97-9bf7277f31bc # Social Media Collection
+    -
+      __assoc__:
+        -
+          - uid
+          - 9c5cda37-1f91-4a67-a630-f58065827219 # Paint
   includeTableView: false
   maxEntries: 1
   minEntries: null

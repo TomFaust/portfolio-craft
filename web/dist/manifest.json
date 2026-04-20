@@ -21,7 +21,7 @@
     "src": "src/js/customization.js"
   },
   "src/js/main.css": {
-    "file": "assets/main-d4bf34cb.css",
+    "file": "assets/main-de2cfbdc.css",
     "src": "src/js/main.css"
   },
   "src/js/main.js": {
@@ -32,9 +32,9 @@
       "assets/ms_sans_serif_bold-5f3fbc57.woff2"
     ],
     "css": [
-      "assets/main-d4bf34cb.css"
+      "assets/main-de2cfbdc.css"
     ],
-    "file": "assets/main-b8a1172b.js",
+    "file": "assets/main-cabd8d69.js",
     "imports": [
       "src/js/timer.js",
       "src/js/customization.js",
@@ -55,7 +55,7 @@
     "src": "src/js/timer.js"
   },
   "src/js/windows.js": {
-    "file": "assets/windows-4031b865.js",
+    "file": "assets/windows-4ea1ada0.js",
     "isEntry": true,
     "src": "src/js/windows.js"
   }
