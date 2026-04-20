@@ -27,7 +27,7 @@ export class Paint{
 
         this.canvas.addEventListener("touchstart",this.startDrawTouch)
         this.canvas.addEventListener("touchmove",this.drawingTouch)
-        this.canvas.addEventListener("touchend", () => { console.log('touchend'); this.isDrawing = false })
+        this.canvas.addEventListener("touchend", () => {this.isDrawing = false })
 
         this.setCanvasBackground();
 
@@ -90,8 +90,6 @@ export class Paint{
 
 
     drawing = (e) =>{
-        console.log('drawing')
-
         if(!this.isDrawing) return;
         this.ctx.putImageData(this.snapshot,0,0);
 
@@ -109,8 +107,6 @@ export class Paint{
     }
 
     startDraw = (e) => {
-        console.log('startDraw')
-
         this.isDrawing = true;
         this.prevMouseX = e.offsetX
         this.prevMouseY = e.offsetY
