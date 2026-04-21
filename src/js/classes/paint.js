@@ -26,8 +26,8 @@ export class Paint{
         this.canvas.addEventListener("mousemove",this.drawing)
         this.canvas.addEventListener("mouseup", () => { this.isDrawing = false })
 
-        this.canvas.addEventListener("touchstart",this.startDrawTouch)
-        this.canvas.addEventListener("touchmove",this.drawingTouch)
+        this.canvas.addEventListener("touchstart",(e) => {this.startDraw(e,true)})
+        this.canvas.addEventListener("touchmove",(e) => {this.drawing(e,true)})
         this.canvas.addEventListener("touchend", () => {this.isDrawing = false })
 
         this.setCanvasBackground();
@@ -64,64 +64,38 @@ export class Paint{
         this.snapshot = this.ctx.getImageData(0,0,this.canvas.width,this.canvas.height)
     }
 
-    startDrawTouch = (e) => {
-        e.preventDefault(); // Prevent scrolling
+    drawing = (e,touch = false) =>{
 
-        const touch = e.touches[0];
-        const rect = this.canvas.getBoundingClientRect(); // Get the canvas position relative to viewport
-        const touchX = touch.clientX - rect.left;
-        const touchY = touch.clientY - rect.top;
-
-        this.isDrawing = true;
-        this.prevMouseX = touchX;
-        this.prevMouseY = touchY;
-        this.ctx.beginPath();
-        this.ctx.lineWidth = this.brushWidth;
-        this.ctx.strokeStyle = this.selectedColor;
-        this.ctx.fillStyle = this.selectedColor;
-        this.snapshot = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
-    }
-
-    drawingTouch = (e) => {
-        e.preventDefault(); // Prevent scrolling
-
-        if (!this.isDrawing) return;
-        
-        const touch = e.touches[0];
-        const rect = this.canvas.getBoundingClientRect(); // Get the canvas position relative to viewport
-        const touchX = touch.clientX - rect.left;
-        const touchY = touch.clientY - rect.top;
-
-        this.ctx.putImageData(this.snapshot, 0, 0);
-
-        if (this.selectedTool === "brush" || this.selectedTool === "eraser") {
-            this.ctx.strokeStyle = this.selectedTool === "eraser" ? "#fff" : this.selectedColor;
-            this.ctx.lineTo(touchX, touchY);
-            this.ctx.stroke();
-        }
-    }
-
-
-    drawing = (e) =>{
         if(!this.isDrawing) return;
+
+        let x = e.offsetX;
+        let y = e.offsetY;
+
+        if(touch){
+            e.preventDefault(); 
+            const touch = e.touches[0];
+            const rect = this.canvas.getBoundingClientRect(); // Get the canvas position relative to viewport
+            x = touch.clientX - rect.left;
+            y = touch.clientY - rect.top;
+        }
+
         this.ctx.putImageData(this.snapshot,0,0);
-        this.dropperActive = false;
 
         if(this.selectedTool === "pencil" || this.selectedTool === "eraser"){
             this.ctx.strokeStyle = this.selectedTool === "eraser" ? "#fff" : this.selectedColor; 
-            this.ctx.lineTo(e.offsetX, e.offsetY);
+            this.ctx.lineTo(x,y);
             this.ctx.stroke()
         }else if(this.selectedTool === "square"){
-            this.drawRect(e);
+            this.drawRect(x,y);
         }else if(this.selectedTool === "oval"){
-            this.drawEllipse(e.offsetX, e.offsetY);
+            this.drawEllipse(x,y);
         }else if(this.selectedTool === "line"){
-            this.drawLine(e);
+            this.drawLine(x,y);
         }
     }
 
-    dropper = (e) => {
-        const data = this.ctx.getImageData(e.offsetX, e.offsetY, 1, 1).data;
+    dropper = (x,y) => {
+        const data = this.ctx.getImageData(Math.round(x),Math.round(y), 1, 1).data;
         const hex = this.rgbToHex(data[0],data[1],data[2])
 
         this.selectedColor = hex;
@@ -133,36 +107,46 @@ export class Paint{
     }
 
     drawEllipse = (x2, y2) => {
-                // Calculate the center of the ellipse
+      
         const centerX = (this.prevMouseX + x2) / 2;
         const centerY = (this.prevMouseY + y2) / 2;
 
-        // Calculate the width and height (semi-major and semi-minor axes)
         const width = Math.abs(x2 - this.prevMouseX) / 2;
         const height = Math.abs(y2 - this.prevMouseY) / 2;
 
-        // Draw the ellipse
         this.ctx.beginPath();
         this.ctx.ellipse(centerX, centerY, width, height, 0, 0, Math.PI * 2);
         this.ctx.strokeStyle = this.selectedColor;
         this.ctx.stroke();
     }
 
-    drawRect = (e) => {
-        this.ctx.strokeRect(e.offsetX,e.offsetY,this.prevMouseX - e.offsetX,this.prevMouseY - e.offsetY);
+    drawRect = (offsetX,offsetY) => {
+        this.ctx.strokeRect(offsetX,offsetY,this.prevMouseX - offsetX,this.prevMouseY - offsetY);
     }
 
-    drawLine = (e) => {
+    drawLine = (offsetX,offsetY) => {
         this.ctx.beginPath();
         this.ctx.moveTo(this.prevMouseX,this.prevMouseY);
-        this.ctx.lineTo(e.offsetX,e.offsetY)
+        this.ctx.lineTo(offsetX,offsetY)
         this.ctx.stroke();
     }
 
-    startDraw = (e) => {
+    startDraw = (e,touch = false) => {
+        let x = e.offsetX;
+        let y = e.offsetY;
+
+        if(touch){
+            e.preventDefault(); // Prevent scrolling
+
+            const touch = e.touches[0];
+            const rect = this.canvas.getBoundingClientRect(); // Get the canvas position relative to viewport
+            x = touch.clientX - rect.left;
+            y = touch.clientY - rect.top;
+        }
+
         this.isDrawing = true;
-        this.prevMouseX = e.offsetX
-        this.prevMouseY = e.offsetY
+        this.prevMouseX = x
+        this.prevMouseY = y
         this.ctx.beginPath();
         this.ctx.lineWidth = this.brushWidth;
         this.ctx.strokeStyle = this.selectedColor;
@@ -170,7 +154,7 @@ export class Paint{
         this.snapshot = this.ctx.getImageData(0,0,this.canvas.width,this.canvas.height)
 
         if(this.selectedTool === "dropper"){
-            this.dropper(e);
+            this.dropper(x,y);
         }
     }
 }
