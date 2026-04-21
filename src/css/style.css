@@ -556,10 +556,6 @@ div[role=tabpanel]{
                 width: 2000px;
                 height:2000px;
                 background-color: #fff;
-
-                margin-top: 50%;
-                margin-left:50%;
-                transform: translate(-50%,-50%);
             }
         }
     }
