@@ -6,7 +6,7 @@ export class Paint{
     prevMouseY; 
     snapshot;
     isDrawing = false;
-    selectedTool = "brush";
+    selectedTool = "pencil";
     brushWidth = 5;
     selectedColor = "#000";
     colorBtns = document.querySelectorAll("#colors .color")
