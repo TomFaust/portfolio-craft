@@ -10,29 +10,27 @@
         <div id="tools">
             <hr>
             <div id="tool-grid">
-                {%set tools = [
-                    "star",
-                    "square_select",
-                    "eraser",
-                    "bucket",
-                    "line",
-                    "wave",
-                    "dropper",
-                    "magnify",
-                    "pencil",
-                    "brush",
-                    "marker",
-                    "text",
-                    "line",
-                    "wave",
-                    "square",
-                    "shape",
-                    "oval",
-                    "rounded"
+                {% set tools = [
+                    { type:"star",enabled: false },
+                    { type:"square_select",enabled: false },
+                    { type:"eraser",enabled: true },
+                    { type:"bucket",enabled: false },
+                    { type:"dropper",enabled: true },
+                    { type:"magnify",enabled: false },
+                    { type:"pencil",enabled: true },
+                    { type:"brush",enabled: false },
+                    { type:"marker",enabled: false },
+                    { type:"text",enabled: false },
+                    { type:"line",enabled: true },
+                    { type:"wave",enabled: false },
+                    { type:"square",enabled: true },
+                    { type:"shape",enabled: false },
+                    { type:"oval",enabled: true },
+                    { type:"rounded",enabled: false }
                 ] %}
 
                 {% for tool in tools %}
-                    <div class="tool"><img src="/public/img/paint/{{tool}}.png"></div>
+                    <div class="tool{% if tool['enabled'] == false %} disabled{%endif%}{% if tool['type'] == "pencil" %} active{% endif %}" id="{{tool['type']}}"><img src="/public/img/paint/{{tool['type']}}.png"></div>
                 {% endfor %}
             </div>
 

@@ -494,7 +494,7 @@ div[role=tabpanel]{
             #tool-grid{
                 display: grid;
                 grid-template-columns: repeat(2, max-content); 
-                grid-template-rows: repeat(9, 25px);
+                grid-template-rows: repeat(8, 25px);
                 height:fit-content;
                 margin-right: 2px;
 
@@ -513,7 +513,15 @@ div[role=tabpanel]{
                     }
                 }
 
-                .tool:active{
+                .tool.active{
+                    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+                }
+
+                .tool.disabled{
+                    cursor: no-drop;
+                }
+
+                .tool:active:not(.disabled){
                     box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
                 }
             }

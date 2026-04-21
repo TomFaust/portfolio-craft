@@ -10,6 +10,7 @@ export class Paint{
     brushWidth = 5;
     selectedColor = "#000";
     colorBtns = document.querySelectorAll("#colors .color")
+    toolBtns; 
     color1;
 
      constructor(div){
@@ -43,12 +44,24 @@ export class Paint{
                 this.color1.style.backgroundColor = this.selectedColor
             })
         })
+
+        this.toolBtns = div.querySelectorAll('#tool-grid .tool')
+        this.toolBtns.forEach((tool) => { 
+            tool.addEventListener("click",()=>{
+                if(!tool.classList.contains('disabled')){
+                    div.querySelector('#tool-grid .tool.active').classList.remove("active");
+                    tool.classList.add("active")
+                    this.selectedTool = tool.id
+                }
+            })
+        })
     }
 
     setCanvasBackground = () => {
         this.ctx.fillStyle = "#fff";
         this.ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
         this.ctx.fillStyle = this.selectedColor;
+        this.snapshot = this.ctx.getImageData(0,0,this.canvas.width,this.canvas.height)
     }
 
     startDrawTouch = (e) => {
@@ -92,18 +105,58 @@ export class Paint{
     drawing = (e) =>{
         if(!this.isDrawing) return;
         this.ctx.putImageData(this.snapshot,0,0);
+        this.dropperActive = false;
 
-        if(this.selectedTool === "brush" || selectedTool === "eraser"){
+        if(this.selectedTool === "pencil" || this.selectedTool === "eraser"){
             this.ctx.strokeStyle = this.selectedTool === "eraser" ? "#fff" : this.selectedColor; 
             this.ctx.lineTo(e.offsetX, e.offsetY);
             this.ctx.stroke()
-        }else if(this.selectedTool === "rectangle"){
-            //drawRect(e);
-        }else if(this.selectedTool === "circle"){
-            //drawCircle(e);
-        }else if(this.selectedTool === "triangle"){
-            //drawTriangle(e);
+        }else if(this.selectedTool === "square"){
+            this.drawRect(e);
+        }else if(this.selectedTool === "oval"){
+            this.drawEllipse(e.offsetX, e.offsetY);
+        }else if(this.selectedTool === "line"){
+            this.drawLine(e);
         }
+    }
+
+    dropper = (e) => {
+        const data = this.ctx.getImageData(e.offsetX, e.offsetY, 1, 1).data;
+        const hex = this.rgbToHex(data[0],data[1],data[2])
+
+        this.selectedColor = hex;
+        this.color1.style.backgroundColor = hex;
+    }
+
+    rgbToHex(r, g, b) {
+        return "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1);
+    }
+
+    drawEllipse = (x2, y2) => {
+                // Calculate the center of the ellipse
+        const centerX = (this.prevMouseX + x2) / 2;
+        const centerY = (this.prevMouseY + y2) / 2;
+
+        // Calculate the width and height (semi-major and semi-minor axes)
+        const width = Math.abs(x2 - this.prevMouseX) / 2;
+        const height = Math.abs(y2 - this.prevMouseY) / 2;
+
+        // Draw the ellipse
+        this.ctx.beginPath();
+        this.ctx.ellipse(centerX, centerY, width, height, 0, 0, Math.PI * 2);
+        this.ctx.strokeStyle = this.selectedColor;
+        this.ctx.stroke();
+    }
+
+    drawRect = (e) => {
+        this.ctx.strokeRect(e.offsetX,e.offsetY,this.prevMouseX - e.offsetX,this.prevMouseY - e.offsetY);
+    }
+
+    drawLine = (e) => {
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.prevMouseX,this.prevMouseY);
+        this.ctx.lineTo(e.offsetX,e.offsetY)
+        this.ctx.stroke();
     }
 
     startDraw = (e) => {
@@ -115,5 +168,9 @@ export class Paint{
         this.ctx.strokeStyle = this.selectedColor;
         this.ctx.fillStyle = this.selectedColor;
         this.snapshot = this.ctx.getImageData(0,0,this.canvas.width,this.canvas.height)
+
+        if(this.selectedTool === "dropper"){
+            this.dropper(e);
+        }
     }
 }
