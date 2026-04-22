@@ -553,8 +553,8 @@ div[role=tabpanel]{
                 overflow: hidden;
             }
             canvas{
-                width: 2000px;
-                height:2000px;
+                width: 1300px;
+                height:700px;
                 background-color: #fff;
             }
         }
