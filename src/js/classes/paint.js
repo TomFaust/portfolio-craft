@@ -6,6 +6,7 @@ export class Paint{
     isDrawing = false;
     selectedTool = "pencil";
     brushWidth = 1;
+    eraserWidth = 3;
     selectedColor = "#000";
     colorBtns = document.querySelectorAll("#colors .color")
     toolBtns; 
@@ -309,7 +310,11 @@ export class Paint{
         this.prevMouseX = x
         this.prevMouseY = y
         this.ctx.beginPath();
-        this.ctx.lineWidth = this.brushWidth;
+        if(this.selectedTool === "eraser"){
+            this.ctx.lineWidth = this.eraserWidth;
+        }else{
+            this.ctx.lineWidth = this.brushWidth;
+        }
         this.ctx.strokeStyle = this.selectedColor;
         this.ctx.fillStyle = this.selectedColor;
         this.snapshot = this.ctx.getImageData(0,0,this.canvas.width,this.canvas.height)
